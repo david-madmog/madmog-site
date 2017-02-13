@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>FiveSixSeven Judo Club</title>
+<meta name="google-site-verification" content="NtvswFun-khQZAV2qUYzjTU1ESIlINzHXrSc4DXv99c" />
+<meta name="verify-v1" content="9WWb1bVaPbJlliCzhjNC9/H3LSCSYhsNhSz54/pg/rE=" />
+<meta name="description" content="FiveSixSeven Judo Club Judo Club in North London affiliated to BJA" />
+<meta name="keywords" content="FiveSixSeven Judo Club, Five Six Seven Judo Club,Judo,Judo club,martial arts, Bounds Green Judo, Muswell Hill Judo, North London Judo, London Judo" />
+
+<link rel="stylesheet" href="fivesixseven.css">
+
+
+<script language="javascript" src="jquery-1.3.2.min.js"></script> 
+<script language="javascript" src="jquery.transform.js"></script>  
+<script type="text/javascript" language="javascript">
+
+function chooseImageDW() {
+  document.write("<img name='thumbImage' src='"+ chooseImage() + "' height='100' border='0'>") ;
+}
+
+function chooseImage () {
+  totalNum = 114;
+  Num = Math.floor(Math.random(totalNum)*totalNum) ;
+  return("./thumbs/img"+Num+".jpg");
+}
+
+function PicRefresh(){
+  var tis = document.getElementsByName("thumbImage") ;
+  for (var i = 0; i < tis.length; i++) {
+    tis[i].setAttribute("src", chooseImage()) ;
+  }
+}
+
+function menuClick(menuitem) {
+  PicRefresh() ;
+
+  var bodybody=document.getElementById("bodybody") ;
+
+  if ( bodybody.hasChildNodes() ) {
+    var children = bodybody.childNodes; 
+    for (var i = 0; i < children.length; i++) {
+      if (children[i].nodeType == 1) {
+        if (children[i].id == menuitem) {
+          children[i].style.display = "inline" ;
+        } else {
+          children[i].style.display = "none" ;
+        }  
+      }
+    }
+  }
+}
+
+function PrintDoc()
+{
+  var n=document.getElementById("joinformframe") ;
+  var w=open(n.src, "", "height=100, width=100, location=0, resizable=0, scrollbars=0, status=0,   titlebar=0, toolbar=0", true) ;
+  w.print() ;
+  w.close() ;
+}
+
+
+function loadXMLDoc(fname)
+{
+  var xmlhttp=false;
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+// JScript gives us Conditional compilation, we can cope with old IE versions.
+// and security blocked creation of the objects.
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+@end @*/
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    try {
+      xmlhttp = new XMLHttpRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+  if (!xmlhttp && window.createRequest) {
+    try {
+      xmlhttp = window.createRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+
+  try {
+    xmlhttp.open("get", fname, false ) ;
+    xmlhttp.send() ;
+  } catch(e){
+    alert('An error has occurred: '+e.message)
+  }
+  return(xmlhttp.responseXML);
+}
+
+function loadAndTransformXMLDoc(XMLDoc, XSLDoc, FragmentID)
+{
+  xml=loadXMLDoc(XMLDoc);
+  xsl=loadXMLDoc(XSLDoc);
+  if (window.ActiveXObject) {
+    ex=xml.transformNode(xsl);
+    document.getElementById(FragmentID).innerHTML=ex;
+  } else if (document.implementation && document.implementation.createDocument) {
+    xsltProcessor=new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+    resultDocument = xsltProcessor.transformToFragment(xml,document);
+    document.getElementById(FragmentID).appendChild(resultDocument);
+  }
+}
+
+
+function loadXMLs() {
+  loadAndTransformXMLDoc("news.xml", "news.xsl", "news");
+  loadAndTransformXMLDoc("classes.xml", "classes.xsl", "classes");
+  loadAndTransformXMLDoc("dates.xml", "dates.xsl", "dates");
+}
+
+</script>
+
+</head>
+<body onload="loadXMLs();">
+  <div id="header">
+    <h1>Five Six Seven Judo Club</h1>
+  </div>
+  <div id = "menu">
+    <p><img alt="567 Judo Club North London Logo" src="imgs/Typo_02[1].png" height="150" /></p>
+    <p class="pseudolink" onClick="menuClick('home');">home</p>
+    <p class="pseudolink" onClick="menuClick('news');">news</p>
+    <p class="pseudolink" onClick="menuClick('classes');">classes</p>
+    <p class="pseudolink" onClick="menuClick('dates');">dates</p>
+    <p class="pseudolink" onClick="menuClick('joiningform');">Joining form</p>
+    <p class="pseudolink" onClick="menuClick('links');">links</p>
+    <p class="pseudolink" onClick="menuClick('resources');">resources</p>
+    <p class="pseudolink" onClick="menuClick('contact');">contact us</p>
+  </div>
+  <div id = "body">
+    <div id = "bodyheader">
+      <table summary="" width="100%">
+        <tr id="headerpics">
+          <td><script language="javascript">chooseImageDW();</script></td>
+          <td><script language="javascript">chooseImageDW();</script></td>
+          <td><script language="javascript">chooseImageDW();</script></td>
+        </tr>
+      </table>
+    </div>
+    <div id = "bodybody">
+      <div id="home" style="display:inline">
+Five Six Seven is a Judo Club in North London N10 offering Judo Classes to adults and children of all levels.
+<table summary="">
+<tr>
+  <td><table summary="" width="100%">
+    <tr><td>Chairman</td><td>Danny Gillard</td><td></td></tr>
+    <tr><td>Vice Chairman</td><td></td><td>Andrea Gargani</td></tr>
+    <tr><td>Secretary</td><td colspan="2" >Dino Armagan</td><td>&nbsp </td></tr>
+    <tr><td>Treasurer</td><td></td><td>Raymond Bennett</td></tr>
+  </table></td>
+	<td width="40%" align="center"><P><img alt="567 Judo Club Logo" src="imgs/Typo_02[1].png" height="300" /></P><P>Established 1998</P></td>
+	<td><table summary="">
+    <tr><td colspan="3">British Judo Association registration number 5014</td></tr>
+    <tr><td>Coaches</td><td>Danny Gillard</td><td>3rd Dan</td></tr>
+    <tr><td> </td><td>Andrea Gargani</td><td>2nd Dan</td></tr>
+    <tr><td> </td><td>David Poirier</td><td>1st Kyu</td></tr>
+		</table></td>
+</tr>
+</table>
+      </div>
+      <div id="news" style="display:none">
+      </div>
+      <div id = "classes" style="display:none">
+      </div>
+      <div id = "dates" style="display:none">
+      </div>
+      <div id = "joiningform" style="display:none">
+<p>Please print out this form, fill it in and bring it to the first session.</p>
+<p><button type="button" onclick="PrintDoc()">Print the Form</button></p>
+<iframe name="joinformframe" id="joinformframe" src="joiningform.htm" width="100%" height="70%" scrolling="auto"></iframe>
+      </div>
+      <div id = "links" style="display:none">
+<h2>Links</h2>
+<p><table summary="">
+  <tr><td><a href="http://www.youtube.com/channel/UCzxn6mLxJShpnIkuX9X8dog"><img alt="YouTube" src="imgs/YouTube-logo-full_color.png" height="86" /></a></td>
+	<td><a href="http://www.youtube.com/channel/UCzxn6mLxJShpnIkuX9X8dog" target="_blank">FiveSixSeven YouTube Channel</a></td></tr>
+</table></p>
+<p><table summary="">
+  <tr><td><a href="http://www.britishjudo.org.uk"><img alt="British Judo Organisation" src="imgs/image001.jpg" /></a></td>
+	<td><a href="http://www.britishjudo.org.uk" target="_blank">British Judo Association</a></td></tr>
+</table></p>
+<p><table summary="">
+  <tr><td><a href="http://www.dropbox.com/sh/ygguww4ek9dpvqb/8r4Ap4efCn">David's Dropbox page of Judo Pictures and videos</a></td>
+  </tr>
+</table></p>
+<p><table summary="">
+  <tr><td><a href="http://www.eujudo.com/"><img alt="European Judo Union" src="imgs/eju.jpg" height="86" width="90" /></a></td>
+  <td><a href="http://www.eujudo.com/">European Judo Union</a></p></td></tr>
+</table></p>
+<p><a href="http://www.ijf.org/"><img alt="International Judo Federation" src="imgs/ijf_link.jpg" height="60" width="216" /></a></p>
+<p><a href="http://www.judoforpeace.com/"><img alt="Judo For Peace" src="imgs/judo_for_peace.bmp" /></a></p>
+<a href="http://www.budokwai.org/home.htm">The Budokwai</a>      </div>
+      <div id = "resources" style="display:none">
+<h2>Resources</h2>
+<h3>Official BJA Syllabus (Oct 2013)</h3>
+<p><a href="Resources/Dan Grading Syllabus Oct 2013.pdf">BJA Dan Grade Syllabus</a> (Black belt and above)</p>
+<p><a href="Resources/Kyu Grading Syllabus Oct 2013.pdf">BJA Kyu Grade Syllabus</a> (Adult Red-Brown Belts)</p>
+<p><a href="Resources/Mon Grading Syllabus Oct 2013.pdf">BJA Mon Grade Syllabus</a> (Junior Red-Brown Belts)</p>
+<h3>567 Judo club issued documents (Oct 2013)</h3>
+<p><a href="Resources/BJA Judo Kyu Syllabus Crib Sheet-Oct 2013.pdf">Kyu Syllabus Pictorial Guide and crib sheet</a></p>
+<p><a href="Resources/BJA Judo Mon Syllabus Crib Sheet-Oct 2013.pdf">Mon Syllabus Pictorial Guide and crib sheet</a></p>
+      </div>
+      <div id = "contact" style="display:none">
+<h2>General Enquiries</h2>
+<table summary="">
+<tr><td colspan=2>Danny Gillard</td></tr>
+<tr><td>Mobile:</td><td>0777 3720860</td></tr>
+<!--<tr><td>Home:</td><td>020 8361 3009</td></tr>!-->
+<tr><td colspan=2><a href="mailto:info@fivesixsevenjudo.co.uk">info@fivesixsevenjudo.co.uk</a></td></tr>
+</table>
+<h2>Website Enquiries</h2>
+<a href="mailto:webmaster@madmog.demon.co.uk">webmaster</a>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <table summary="" width="100%">
+      <tr>
+        <td><script language="javascript">chooseImageDW();</script></td>
+        <td><script language="javascript">chooseImageDW();</script></td>
+        <td><script language="javascript">chooseImageDW();</script></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+
+body {
+  font-family: "Verdana", "Arial", Sans-serif; 
+  color: darkblue;
+  background-color: white;
+  font-size: 10pt;
+}
+
+h1 {
+  text-align: left ;
+}
+	
+p {
+  margin-bottom: 0;
+  margin-top: 0px;
+}  
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+//    border: 1px darkblue;
+    border: 0px;
+    border-style: solid;
+    text-align: center;
+    width: 7%;
+    min-width: 30px;
+//    vertical-align: top ;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}	
+
+#header {
+  float: left;
+  vertical-align: top;
+  width: 100%;
+  border-bottom: darkblue;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}  
+
+#index {
+  float: left;
+  vertical-align: top;
+  border-right: darkblue;
+  border-right-style: solid;
+  border-right-width: 1px;
+  height: 100%;
+  width: 19%;
+  overflow: auto;
+}  
+
+#CTD {
+  background-color: transparent;
+//  border-color: transparent;
+  border: 1px darkblue;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#details {
+  float: left;
+  height: 100%;
+  width: 80%;
+  vertical-align: top;
+}  
+
+#maintable {
+  overflow: auto;
+  display: flex;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+  
+.subtext {
+  font-size: 8pt;
+}  
+  
+.pseudolink {
+    color: darkblue ;
+    text-align: center ;
+//    padding: 10px;
+    font-size: 10pt;
+}
+
+.pseudolink:hover {
+    color:white; 
+    background-color: darkblue ;
+} 
+
+.IndexEntry {
+    color: darkblue ;
+    text-align: left ;
+    padding: 5px;
+    font-size: 9pt;
+}
+
+.IndexEntry:hover {
+    color:white; 
+    background-color: darkblue ;
+} 
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: red;
+    border-bottom: 1px dotted red; /* If you want dots under the hoverable text */
+    font-size: 8pt;
+    z-index: 9999;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 500px ;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border-spacing: 1;
+    border-color: lightgray;
+    border-style: solid;
+ 
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+

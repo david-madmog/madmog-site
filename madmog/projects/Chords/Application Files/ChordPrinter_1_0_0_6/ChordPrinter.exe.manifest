@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ChordPrinter.exe" version="1.0.0.6" publicKeyToken="6237c620790bb6d6" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Chord.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ChordPrinter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ChordPrinter.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChordPrinter.exe" size="206336">
+      <assemblyIdentity name="ChordPrinter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LQYbw9tDRQbnS5ep6v4iGFSE9tSc6Px9HulnPL8hdzc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Chord.ico" size="23814">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Fe3SOxdPCwjmc8WbQvKY7BWJleJ1w17ObywX6BXowU8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ChordPrinter.exe.config" size="1537">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zNnK0kBJ92h3B4jngnRFtbHGxwew4tT29ozSECJAoGQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=G2\davidp" issuerKeyHash="2a0b31ea1d87ca127a2461e9f3c40883df3d1e5b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>cKQ8cjOTQkXe9j52wYm6O4N/xaZtEHFdGOt1+4gFVy0=</DigestValue></Reference></SignedInfo><SignatureValue>E0YeQGa8UiF9KpR+2+1DSnJeTHd2nx8RnCwOe/QZnjPTS49O+/iNjGbLiGwb29O8OaEWZBvhaPrVXyTNZFAoKHoiSB85negQxVLeUWvbtoc182VEQ/NR1MNedV0Rcdj0cirsgKyi1Jg5yb9WqBxMYedOwCqAk6eAIeGOykobcjY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>izIKZm2aj2bGZP/8ej7sRhEKm6q/uln2wQViC19+tAnhmNndkS7+qsXkRlMTgEWR2RnYdtaGjHFUkaAmvge3g5wBEOlqCNSTAMHAWMf5QcQWTlo1ozarQHVHwC2qZirNDH8GdfzQPBiUy/QXAOsqlR49BMLwquvKnBaTmTd+ztE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="2d570588fb75eb185d71106da6c57f833bba89c1763ef6de45429333723ca470" Description="" Url=""><as:assemblyIdentity name="ChordPrinter.exe" version="1.0.0.6" publicKeyToken="6237c620790bb6d6" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=G2\davidp</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>V2jbRfiRRVMwry5DPKXMUWWiKwp02fv2wVZqrHHSNTQ=</DigestValue></Reference></SignedInfo><SignatureValue>E6YAzJKDZI37zG4OgEhhADOKpK+R5OYzQg2/FT9MpNh7UPTGewJ1h9XJvhtt/hYPTUO8AwWcwtsQYcN8yD79BgcBgEYPYeouwmUEOQnJS0FqbxseAooQAYO7bh1VFmwJZY7Hei3IRmiM2LixXBbXzkPDcOgDS4zIa6FRUOiDJR4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>izIKZm2aj2bGZP/8ej7sRhEKm6q/uln2wQViC19+tAnhmNndkS7+qsXkRlMTgEWR2RnYdtaGjHFUkaAmvge3g5wBEOlqCNSTAMHAWMf5QcQWTlo1ozarQHVHwC2qZirNDH8GdfzQPBiUy/QXAOsqlR49BMLwquvKnBaTmTd+ztE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASagAwIBAgIQOd9goD56OJZDzWrnQ5b/qjANBgkqhkiG9w0BAQsFADAdMRswGQYDVQQDHhIARwAyAFwAZABhAHYAaQBkAHAwHhcNMTMwOTMwMTM0MjEyWhcNMTQwOTMwMTk0MjEyWjAdMRswGQYDVQQDHhIARwAyAFwAZABhAHYAaQBkAHAwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAIsyCmZtmo9mxmT//Ho+7EYRCpuqv7pZ9sEFYgtffrQJ4ZjZ3ZEu/qrF5EZTE4BFkdkZ2HbWhoxxVJGgJr4Ht4OcARDpagjUkwDBwFjH+UHEFk5aNaM2q0B1R8AtqmYqzQx/BnX80DwYlMv0FwDrKpUePQTC8KrrypwWk5k3fs7RAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAiKeRxix8RRygbmMtCLICWHlBEuSuqVWWzpjiQkZ678OeV7msGTJLJlfAwv1MW8nkqS98sYe9Vt4okJnIZB+nryNwE5hZh0G0IQn7xs0OxTWYE8jADrn9qpAqJWWs3SacvzHeNn3U+D0FDDoVDjlDLyEzU6MoJ4DDzI3VexOsOVg=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

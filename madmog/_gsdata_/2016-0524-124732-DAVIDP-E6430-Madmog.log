@@ -1,0 +1,41 @@
+2016-05-24 12:47:32: -- Madmog: ANALYSIS started by User on 'DAVIDP-E6430' (GoodSync 8.9.9.9)
+2016-05-24 12:47:32: C:\Users\davidp\Documents\Personal\Madmog website <-> ftp://ftp1.namesco.net/web, FolderLinksIgnore, FileLinksDrill
+2016-05-24 12:47:32: L: Files: 14 (excluded 0). Folders: 10 (excluded 1). C: NTFS, Free: 86.5 GB, Total: 223 GB
+2016-05-24 12:47:33: R: State file does not exist: ftp://ftp1.namesco.net/web/_gsdata_/_file_state._gs
+2016-05-24 12:47:33: R: No State File found, New State will be built
+2016-05-24 12:47:33: R: Files: 0 (excluded 0). Folders: 0 (excluded 0). FTP: ********************************************************************************FTP Server ready. Unauthorised access is not per ...
+2016-05-24 12:47:33: Changes: 24, Conflicts: 0, CopyTime: 0, CopyState: 119/0, Errors: 0
+2016-05-24 12:47:33: Left to Right: Copy File: 24 Copy State: 119 
+2016-05-24 12:47:33: -- Analysis Completed. Time 00:00:01, Speed: 25 files/s
+2016-05-24 12:47:33: 
+2016-05-24 12:49:31: New _gsdata_ folder(s) created, so rescan all job folders for their ghosts
+2016-05-24 12:49:31: == Madmog: SYNC started by User on 'DAVIDP-E6430'
+2016-05-24 12:49:31: C:\Users\davidp\Documents\Personal\Madmog website <-> ftp://ftp1.namesco.net/web, FolderLinksIgnore, FileLinksDrill
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/bigimgs'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/projects'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/projects/Chords'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/projects/Chords/Application Files'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/projects/Chords/Application Files/ChordPrinter_1_0_0_6'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/public'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/thumbs'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/TREE'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/TREE/Imgs'
+2016-05-24 12:49:31: Create Folder 'ftp://ftp1.namesco.net/web/TREE/SRC'
+2016-05-24 12:49:31: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\projects\projects.htm' -> 'ftp://ftp1.namesco.net/web/projects/projects.htm'
+2016-05-24 12:49:31: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\projects\Sudoku.bat' -> 'ftp://ftp1.namesco.net/web/projects/Sudoku.bat'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\projects\Sudoku.jar' -> 'ftp://ftp1.namesco.net/web/projects/Sudoku.jar'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\DAVID.XML' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/DAVID.XML'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\GedMLToHTML.xsl' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/GedMLToHTML.xsl'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\GedMLToHTML_Index.xsl' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/GedMLToHTML_Index.xsl'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\make.bat' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/make.bat'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\msxsl.exe' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/msxsl.exe'
+2016-05-24 12:49:32: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\TreeIndex.htm' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/TreeIndex.htm'
+2016-05-24 12:49:33: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\TreePage.htm' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/TreePage.htm'
+2016-05-24 12:49:33: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\SRC\treepagesav.htm' -> 'ftp://ftp1.namesco.net/web/TREE/SRC/treepagesav.htm'
+2016-05-24 12:49:33: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\TreeFrame.htm' -> 'ftp://ftp1.namesco.net/web/TREE/TreeFrame.htm'
+2016-05-24 12:49:33: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\TreeIndex.htm' -> 'ftp://ftp1.namesco.net/web/TREE/TreeIndex.htm'
+2016-05-24 12:49:34: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\TREE\TreePage.htm' -> 'ftp://ftp1.namesco.net/web/TREE/TreePage.htm'
+2016-05-24 12:49:34: Save State File ftp://ftp1.namesco.net/web/_gsdata_/_file_state_v4._gs
+2016-05-24 12:49:34: Items Synced OK: 143, Errors: 0
+2016-05-24 12:49:34: == Sync Completed. Time: 00:00:03, Speed: 354 KB/s (1.50 MB/s)
+2016-05-24 12:49:34: 

@@ -1,0 +1,22 @@
+2016-05-24 13:37:08: -- Madmog: ANALYSIS started by User on 'DAVIDP-E6430' (GoodSync 8.9.9.9)
+2016-05-24 13:37:08: C:\Users\davidp\Documents\Personal\Madmog website <-> ftp://ftp1.namesco.net/web, FolderLinksIgnore, FileLinksDrill
+2016-05-24 13:37:08: L: Files: 22 (excluded 0). Folders: 10 (excluded 1). C: NTFS, Free: 86.5 GB, Total: 223 GB
+2016-05-24 13:37:08: R: Files: 14 (excluded 0). Folders: 10 (excluded 1). FTP: ********************************************************************************FTP Server ready. Unauthorised access is not per ...
+2016-05-24 13:37:08: Changes: 8, Conflicts: 0, CopyTime: 0, CopyState: 0/0, Errors: 0
+2016-05-24 13:37:08: Left to Right: Copy File: 8 
+2016-05-24 13:37:08: -- Analysis Completed. Time 00:00:00, Speed: Many files/s
+2016-05-24 13:37:08: 
+2016-05-24 13:37:14: == Madmog: SYNC started by User on 'DAVIDP-E6430'
+2016-05-24 13:37:14: C:\Users\davidp\Documents\Personal\Madmog website <-> ftp://ftp1.namesco.net/web, FolderLinksIgnore, FileLinksDrill
+2016-05-24 13:37:14: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\7back.gif' -> 'ftp://ftp1.namesco.net/web/7back.gif'
+2016-05-24 13:37:14: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\aboutus.htm' -> 'ftp://ftp1.namesco.net/web/aboutus.htm'
+2016-05-24 13:37:14: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\atwork89.gif' -> 'ftp://ftp1.namesco.net/web/atwork89.gif'
+2016-05-24 13:37:14: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\bombaas3.gif' -> 'ftp://ftp1.namesco.net/web/bombaas3.gif'
+2016-05-24 13:37:15: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\demon.gif' -> 'ftp://ftp1.namesco.net/web/demon.gif'
+2016-05-24 13:37:15: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\index.htm' -> 'ftp://ftp1.namesco.net/web/index.htm'
+2016-05-24 13:37:15: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\OldIndex.htm' -> 'ftp://ftp1.namesco.net/web/OldIndex.htm'
+2016-05-24 13:37:15: Copy New 'C:\Users\davidp\Documents\Personal\Madmog website\t3c301.jpg' -> 'ftp://ftp1.namesco.net/web/t3c301.jpg'
+2016-05-24 13:37:15: Save State File ftp://ftp1.namesco.net/web/_gsdata_/_file_state_v4._gs
+2016-05-24 13:37:15: Items Synced OK: 8, Errors: 0
+2016-05-24 13:37:15: == Sync Completed. Time: 00:00:01, Speed: 43.3 KB/s (201 KB/s)
+2016-05-24 13:37:15: 

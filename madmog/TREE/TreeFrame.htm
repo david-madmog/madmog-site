@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>David Poirier Family Tree</title>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<script language="JavaScript" type="text/javascript">
+<!-- 
+function MyOnLoad(){ var Person ; var URL ; var myIndex ; URL = window.location.href; PIndex = URL.lastIndexOf("?"); if (PIndex > -1) { Person = HashString(URL.substr(PIndex + 1)); myIndex = window.frames["Index"].document; max = myIndex.links.length; for(iterator=0; iterator<max; iterator++) { if (HashString(myIndex.links[iterator].innerText) == Person) {  dest=myIndex.links[iterator].href; window.frames["Main"].document.URL = dest } } } } function HashString(inString) { var outString ; var max ; var iterator ; outString = ""; max = inString.length; for(iterator=0; iterator<max; iterator++) { if (inString.charAt(iterator)=="%") { iterator = iterator + 2 } else { if (inString.charAt(iterator)!=" ") {  outString = outString.concat(inString.charAt(iterator)) } } } return outString.toUpperCase() }// -->
+</script>
+</head>
+<frameset rows="110,550" frameborder="0" border="1" framespacing=
+"1" onload="MyOnLoad()">
+<frame name="Top" src="TreeTop.htm" scrolling="no" id="Top">
+<frameset cols="240,550" frameborder="1" border="1" framespacing="1">
+
+<frame name="Index" src="TreeIndex.htm" scrolling="yes" id="Index">
+<frame name="Main" src="TreePage.htm" id="Main">
+</frameset>
+<noframes>
+<body>
+<p> </p>
+</body>
+</noframes>
+</frameset>
+</html>

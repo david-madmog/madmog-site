@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+<title>Joining Form</title>
+<link rel="stylesheet" href="fivesixseven.css">
+
+<script>
+
+function loadXMLDoc(fname)
+{
+  var xmlhttp=false;
+/*@cc_on @*/
+/*@if (@_jscript_version >= 5)
+// JScript gives us Conditional compilation, we can cope with old IE versions.
+// and security blocked creation of the objects.
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+@end @*/
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    try {
+      xmlhttp = new XMLHttpRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+  if (!xmlhttp && window.createRequest) {
+    try {
+      xmlhttp = window.createRequest();
+    } catch (e) {
+      xmlhttp=false;
+    }
+  }
+
+  try {
+    xmlhttp.open("get", fname, false ) ;
+    xmlhttp.send() ;
+  } catch(e){
+    alert('An error has occurred: '+e.message)
+  }
+  return(xmlhttp.responseXML);
+}
+
+function loadAndTransformXMLDoc(XMLDoc, XSLDoc, FragmentID)
+{
+  xml=loadXMLDoc(XMLDoc);
+  xsl=loadXMLDoc(XSLDoc);
+  if (window.ActiveXObject) {
+    ex=xml.transformNode(xsl);
+    document.getElementById(FragmentID).innerHTML=ex;
+  } else if (document.implementation && document.implementation.createDocument) {
+    xsltProcessor=new XSLTProcessor();
+    xsltProcessor.importStylesheet(xsl);
+    resultDocument = xsltProcessor.transformToFragment(xml,document);
+    document.getElementById(FragmentID).appendChild(resultDocument);
+  }
+}
+
+
+function loadXMLs() {
+  loadAndTransformXMLDoc("classes.xml", "classescompact.xsl", "classes");
+  loadAndTransformXMLDoc("dates.xml", "datescompact.xsl", "dates");
+}
+</script>
+
+</head>
+
+<body class="joinform" onload="loadXMLs();"> 
+
+<h1>Five Six Seven Judo Club</h1>
+<h2>Enrolment Form</h1>
+
+<table width="100%" >
+  <tr><td>Please Enrol:</td></tr>
+  <tr>
+    <td width="22%" align="right">First Name</td><td width="18%" class="TCunderline">&nbsp;</td>
+    <td width="10%" align="right">Surname</td><td width="20%" class="TCunderline">&nbsp;</td>
+    <td width="10%" align="right">Date of Birth</td><td width="20%" class="TCunderline">&nbsp;</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+</table>
+
+<div id = "classes"></div>
+
+<h2>Contact Details</h2>
+
+<table>
+  <tr>
+    <td align="right">Parent/carers contact; Name</td><td colspan="2" class="TCunderline">&nbsp;</td>
+    <td align="right">Phone</td><td class="TCunderline">&nbsp;</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td align="right">Email</td><td colspan="6" class="TCunderline">&nbsp;</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td align="right">Any health Issues the instructor should be aware of?</td><td width=10% align="center">No  /  YES</td>
+    <td colspan="3" class="TCunderline">&nbsp;</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td align="right">Signature of Player/Parent or Guardian</td><td colspan="2" width=50% class="TCunderline">&nbsp;</td>
+    <td>Date</td><td width="20%" class="TCunderline">&nbsp;</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+    <td align="right">Name (please print)</td><td colspan="5" class="TCunderline">&nbsp;</td>
+  </tr>
+</table>			 
+<hr>
+<h2>Please retain this section for your records</h2>
+
+<div id = "dates"></div>
+
+<table summary="">
+  <tr><td colspan=2>David Poirier</td><td>Mobile:</td><td>07515 575153</td></tr>
+  <tr><td colspan=2>Andrea Gagani</td><td>Mobile:</td><td>07889 728372</td></tr>
+</table>
+
+<p>www.fivesixsevenjudo.co.uk</p>
+
+</body>
+</html>
