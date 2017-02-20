@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Pipes.jnlp">
-  <information>
-    <title>Pipes</title>
-    <vendor>davidp</vendor>
-    <description>Sample JavaFX 2.0 application.</description>
-    <offline-allowed/>
-  </information>
-  <resources>
-    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
-  </resources>
-  <resources>
-    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="http://www.madmog.co.uk/madmog/projects/Pipes.jar" size="2139262" download="eager" />
-  </resources>
-<security>
-  <all-permissions/>
-</security>
-  <application-desc main-class="Pipes.Pipes"  name="Pipes" >
-  </application-desc>
-  <update check="always"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="$$codebase" href="launch.jnlp">
+    <information>
+        <title>Pipes Game</title>
+        <vendor>Davesoft</vendor>
+        <description>A Fun pipes game</description>
+        <description kind="short">Pipes Game</description>
+        <homepage href="http://www.madmog.demon.co.uk"/>
+        <icon href="PipesIcon.png" kind="default"/>
+        <offline-allowed/>
+    </information>
+    <security>
+        <all-permissions/>
+    </security>
+    <resources>
+        <j2se version="1.5+"/>
+        <jar href="Pipes.jar" main="true" download="eager"/>
+        <jar href="lib/AbsoluteLayout.jar" download="eager"/>
+        <jar href="lib/appframework-1.0.3.jar" download="eager"/>
+        <jar href="lib/beansbinding-1.2.1.jar" download="eager"/>
+        <jar href="lib/swing-worker-1.1.jar" download="eager"/>
+    </resources>
+    <application-desc main-class="pipes.PipesApp">
+    </application-desc>
 </jnlp>
