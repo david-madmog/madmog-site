@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>darthmorf's proxy</title>
+<title>darthmorf's free internet browser</title>
 <meta name="description" content="<!--[meta_description]-->">
 <meta name="keywords" content="<!--[meta_keywords]-->">
 <style type="text/css">
