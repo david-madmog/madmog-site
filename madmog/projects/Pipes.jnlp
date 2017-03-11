@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jnlp spec="1.0+" codebase="$$codebase" href="launch.jnlp">
+<jnlp spec="1.0+" codebase="http://www.madmog.co.uk/madmog/projects/" href="Pipes.jnlp">
     <information>
         <title>Pipes Game</title>
         <vendor>Davesoft</vendor>
