@@ -1,162 +1,451 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 
-    <title>Sam Poirier AKA darthmorf</title>
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Madmog</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/stylesheet.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-	</head>
-	<body>
-	
-		<!-- Home Panel  -->
-	<div class="panel" id="home">
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		
-		<h2 class="home">Hello, my name is</h2>
-		<h1 class="home">Sam Poirier AKA darthmorf</h1> 
-		<br>
-		<img src="./assets/img/home/portrait.png" height="200" width="200">
-		<br>
-		<h1 class="home">About Me</h1><br>
-		<p class="home">
-		My name is Sam Poirier, also known as darthmorf. I frequent many forums, primarily the <a class="home" href="https://forums.terraria.org/index.php">Terraria Community Forums</a> and <a class="home" href="https://www.reddit.com/">Reddit</a>. <br>
-		I am also a moderator for the <a class="home" href="https://www.youtube.com/channel/UC5rUMdCFWPXYs9e8PBLzq5g">Angory_Tom</a> (a member of the  <a class="home" href="https://www.youtube.com/user/BlueXephos">Yogscast</a>) 
-		<a class="home" href="https://discord.gg/MtpbDj5">discord </a>and <a class="home" href="https://www.reddit.com/r/Angory_Tom/">subreddit</a>,
-		as well as a community moderator for the <a class="home" href="https://forums.terraria.org/index.php?social-forums/super-terraria-world.436/">Super Terraria World Terraria Mod!</a><br>
-		<br>
-		I'm experienced in a few programming languages, primarily C# and Python, with a little HTML, CSS and Javascript thrown in. I have a bit of experience using Adobe Flash Builder too. <br>
-		I love playing video games of all genres, and am obsessed with Star Wars.<br>
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
 
-		This site acts as a portfolio for various projects I'm involved in, and also as a gallery of art people have made for me.
-		</p>
-		
-	</div>
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
 
-	</body>
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
 
-	<!--T-Backup Page -->
-	<div class="panel" id="t-backup">
-		<div class="panel-content">
-			<div class="topcorner">
-			<a class="exit" href="#home"> X </a>
-			</div>
-			<img src="./assets/img/t-backup/logo.png">
-			<h2 class="tbackup"><b>A TERRARIA BACKUP UTILITY PROGRAM</b></h2>
-			</b>
-			<br>
-			<br>
-			<p class="tbackup">
-			T-Backup is a program that backs up worlds and player files from the game <a class="tbackup" href="http://terraria.org/">Terraria</a>. It supports multiple profiles to allow different locations for mods. <br>
-			It is written in C#, and is intended to be run on Windows.<br>
-			T-Backup does not require an installer, simply run the downloaded executable to start.<br>
-			<b>A new, improved version is currently in the works!</b><br><br>
-			</p>
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+
+   		<div class="logo">
+	         <a href="index.html">Madmog</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation">
+					<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+					<li><a class="smoothscroll"  href="#about" title="">about</a></li>
+					<li><a class="smoothscroll"  href="#stw" title="">stw</a></li>
+					<li><a class="smoothscroll"  href="#t-backup" title="">t-backup</a></li>
+					<li><a class="smoothscroll"  href="#tlogomaker" title="">terraria logo maker</a></li>
+					<li><a class="smoothscroll"  href="#contact" title="">contact me</a></li>					
+					<li class="highlight with-sep"><a href="gallery.html" title="">Gallery</a></li>					
+				</ul>
+			</nav>
+
+			<a class="menu-toggle" href="#"><span>Menu</span></a>
+   		
+   	</div>   	
+   	
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">
+
+   	<div class="shadow-overlay"></div>
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+				<img src="images/logo.png" width="150" height="150" alt="">
+
+	   			<h5>Welcome to madmog.co.uk</h5>
+	   			<h1 class="blend">The personal website of <br>Sam Poirier AKA darthmorf</h1>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">About Me</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> 
+
+   	<!-- Modal Popups
+	   ========================================================= -->
+
+      <div id="stw-video-popup" class="popup-modal mfp-hide">
+
+		   <div class="fluid-video-wrapper">
+            <iframe src="https://youtube.com/embed/jRIEMD8e890" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+         </div>		     
+
+         <a class="close-popup">Close</a>         
+
+	   </div> <!-- /video-popup -->  
+
+	   <div id="terrarialogomaker01-video-popup" class="popup-modal mfp-hide">
+
+		   <div class="fluid-video-wrapper">
+            <iframe src="https://youtube.com/embed/bBJR91QhZes" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+         </div>		     
+
+         <a class="close-popup">Close</a>         
+
+	   </div> <!-- /video-popup -->
+
+	   <div id="terrarialogomaker02-video-popup" class="popup-modal mfp-hide">
+
+		   <div class="fluid-video-wrapper">
+            <iframe src="https://youtube.com/embed/pNxXr-Ty2J0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+         </div>		     
+
+         <a class="close-popup">Close</a>         
+
+	   </div> <!-- /video-popup -->	 	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about Section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   			<h5>my name is</h5>
+   			<h1>Sam Poirier AKA darthmorf</h1>
+
+   			<p class="lead">I am experienced in a few programming languages, primarily C# and Python, with a little HTML, CSS and Javascript thrown in. I have some experience using Adobe Flash Builder too. 
+			I love playing video games of all genres, and am obsessed with Star Wars.
+			This site acts as a portfolio for various projects I'm involved in, and also as a gallery of art people have made for me.</p>
+
+   		</div>   		
+   	</div>
+
+   	<div class="row about-content">
+
+   		<div class="left-side">
+
+   			<div class="item" data-item="α">
+
+   				<h5>My Projects</h5>
+
+   				<p>I have a few personal programming projects which I work on in my spare time for fun and for practice. At the moment I am working on <br> <a class="smoothscroll" href="#t-backup">T-Backup</a> and <a class="smoothscroll" href="#tlogomaker">Terraria Logo Maker</a>.</p>
+   					
+   			</div>
+
+   			<div class="item" data-item="β">
+
+	   			<h5>Angory_Tom</h5>
+
+	   			<p><a href="https://www.youtube.com/channel/UC5rUMdCFWPXYs9e8PBLzq5g">Angory_Tom</a> is a YouTuber who is part of the <a href="http://yogscast.com/">Yogscast</a> network. I am a lead moderator on his official <a href="https://discord.gg/MtpbDj5">Discord</a> and <a href="https://www.reddit.com/r/Angory_Tom/">Subreddit</a>, where we chat with the community and organise special events.</p>
+   					
+   			</div>
+   				
+   		</div> <!-- /left-side -->
+   		
+   		<div class="right-side">
+   				
+   			<div class="item" data-item="γ">
+
+   				<h5>Super Terraria World</h5>
+
+   				<p><a class="smoothscroll" href="#stw">STW</a> is a complete overhaul mod for <a href="http://terraria.org/">Terraria</a>, which I help to develop and moderate the community<br><br><br><br></p>
+   					
+   			</div>
+
+   			<div class="item" data-item="δ">
+
+   				<h5>Art</h5>
+
+   				<p>Featured throughout this website is art created for me mostly by the talented Terraria Community - you can view them all in the <a href="gallery.html">Gallery</a>.</p>
+   					
+   			</div>
+
+   		</div> <!-- /right-side -->  
+
+   		<div class="image-part"></div>  			
+
+   	</div> <!-- /about-content --> 
+
+   </section> <!-- /about-->    
+
+
+   <!-- stw Section
+   ================================================== -->
+	<section id="stw">
+
+		<div class="row section-intro">
 			
-			<img src = "./assets/img/t-backup/01.png"> <img src = "./assets/img/t-backup/02.png"> <img src = "./assets/img/t-backup/03.png">
-			<p class="tbackup">
-			<br><br>
-			You can view the <a class="tbackup" href="https://github.com/darthmorf/T_Backup">source code</a>, as well as <a class="tbackup" href="https://github.com/darthmorf/T_Backup/releases">downloads</a> via Github! <br>
-			I'd love to hear any feedback - you can do so via <a class="tbackup" href="https://forums.terraria.org/index.php?threads/t-backup-backup-your-worlds-and-players-with-ease.33697/">The Official Forum Post</a> or you can <a class="tbackup" href="#contact">contact me directly</a>.
-			</p>
-		</div>
-	</div>
-	
-	<!--STW Page -->
-	<div class="panel" id="stw">
-		<div class="panel-content">
-			<div class="topcorner">
-			<a class="exit" href="#home"> X </a>
-			</div>
-			<img src="./assets/img/STW/logo.png">
-			<h2 class="stw"><b>A TOTAL CONVERSION TERRARIA MOD</b></h2>
-			</b>
-			<br>
-			<br>
-			<p class="stw">
-			Super Terraria World (STW) is a standalone role-playing mod, which will be kept up-to-date with any official release of <a class="stw" href="http://terraria.org/">Terraria</a>. The primary goal of this mod is to 
-			bring a MMORPG element to the game. Currently, the devs are only releasing Single Player Alpha versions of STW. This is so they can focus all of their 
-			effort on creating plenty of quality content for us to enjoy. <br>
-			I developed an installer for the mod, and am currently working with the devs to create a new, more improved launcher using adobe flash builder.
-			</p>
-			<br>
-			<img src = "./assets/img/STW/01.png"> <img src = "./assets/img/STW/02.png"> <img src = "./assets/img/STW/03.png">
-			<p class="stw">
-			<br><br>
-			You can find out more information about the mod through the <a class="stw" href="https://forums.terraria.org/index.php?social-forums/super-terraria-world.436/">forum thread</a>, as well as joining us on <a class="stw" href="http://bit.ly/DiscordSTW">discord</a> .
-			</p>
-		</div>
-	</div>
-	
-	<!--Terraria Logo Maker Page -->
-	<div class="panel" id="tlogomaker">
-		<div class="panel-content">
-			<div class="topcorner">
-			<a class="exit" href="#home"> X </a>
-			</div>
-			<img src="./assets/img/terraria_logo_maker/logo.png">
-			<h2 class="tlogomaker"><b>A CUSTOM LOGO CREATION TOOL</b></h2>
-			</b>
-			<br>
-			<br>
-			<p class="tlogomaker">
-			Terraria logo maker is a tool that allows you to create custom logos like the one from the game <a class="tlogomaker" href="http://terraria.org/">Terraria</a>. It has support for custom themes, but only includes 'Overworld' at the moment. The logo you can see here was made using this tool!<br>
-			Once more themes have been made, they will be added as optional additional downloads. If you wish you can create your own theme using <a class="tlogomaker" href="http://forums.terraria.org/index.php?threads/program-darthmorfs-terraria-logo-maker.48889/#Create">this tutorial</a>.<br>
-			Terraria Logo Maker is written in C# and intended to be run on windows. Simply extract the zip folder and you're ready to go.
-			</p>
-			<br>
-			<img src = "./assets/img/terraria_logo_maker/01.gif"> 
-			<p class="tlogomaker">
-			<br><br>
-			You can view the <a class="tlogomaker" href="https://github.com/darthmorf/Terraria-Logo-Maker">source code</a>, as well as <a class="tlogomaker" href="https://github.com/darthmorf/Terraria-Logo-Maker/releases">downloads</a> via Github! <br>
-			I'd love to hear any feedback - you can do so via <a class="tlogomaker" href="https://forums.terraria.org/index.php?threads/program-darthmorfs-terraria-logo-maker.48889/">The Official Forum Post</a> or you can <a class="tlogomaker" href="#contact">contact me directly</a>.
-			</p>
-		</div>
-	</div>
-	
-	<!--Contact Page -->
-	<div class="panel" id="contact">
-		<div class="panel-content">
-			<div class="topcorner">
-			<a class="exit" href="#home"><font color="#000000"> X </font></a>
-			</div>
-			<h2 class="contact"><b>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</b></h2>
-			<p class="contact">
-			<script type="text/javascript" src="https://form.jotformeu.com/jsform/70644998893377"></script>
-			</p>
-			<h2 class="contact"><b>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</b></h2>
-		</div>
-	</div>
-	
-	
-	<!--Gallery Page -->
-	<div class="panel" id="gallery">
-		<div class="panel-content">
-			<div class="topcorner">
-			<a class="exit" href="#home">X</a>
-			</div>
-			<h1 class="gallery"><b>GALLERY</b></h1>
-			<h2 class="gallery"><b>CUSTOM ART MADE FOR ME</b></h2>
-			</b>
-			<br>
-			<br>
-			
-			<object data="gallery.html" width="960" height="480"> 
-				Your browser doesn’t support the object tag. 
-			</object>
+   		<div class="col-twelve with-bottom-line">
+			   <div class='video-link'>
+	   				<a href="#stw-video-popup"><img src="images/play-button.png" height="100" width="100" alt=""></a>
+	   			</div><br>
+
+   			<h5>A total conversion mod for Terraria</h5>
+   			<h1>Super Terraria World</h1>
+
+   			<p class="lead">Super Terraria World changes the hit game <a href="http://terraria.org/">Terraria</a> into an MMORPG. It is a standalone roleplaying mod with fully fledged quests that will be kept up to date with the latest release of Terraria. I am the developer of the installer and have started helping port the mod to 1.3.5.</p>
+
+   		</div>   		
+   	</div>
+
+   	<div class="row stw-content">
+
+   		<div class="stw-list block-1-3 block-s-1-2 block-tab-full group">
+
+	      	<div class="bgrid feature">	
 				
-			</p>
-		</div>
-	</div>
+	      		<span class="icon"><img src="images/quests_icon.png"><span>            
+					<br><br>
+	            <div class="service-content">	
+
+	            	 <h3 class="h05">Fully Developed Questlines</h3>
+
+		            <p>Super Terraria World features fully developed questlines with custom items, custom areas and custom NPCs. Quests can contain everything from puzzles to crafting to combat.</p>
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /bgrid -->
+
+				<div class="bgrid feature">	
+
+					<span class="icon"><img src="images/maps_icon.png"></span>                          
+
+	            <div class="service-content">	
+	            	<h3 class="h05">Custom Locations</h3>  
+
+		            <p>STW contains custom maps built by the talented builder <a href="https://twitter.com/terrariankhaios">Khaios</a> which create an amazing atmosphere to run around in, completing quests. There are also areas allowing for the player to build, unleashing their creativity on the world!</p>
+
+	         		
+	            </div>	                          
+
+			   </div> <!-- /bgrid -->
+
+			   <div class="bgrid feature">
+
+			   	<span class="icon"><img src="images/items_icon.png"></span>		            
+
+	            <div class="service-content">
+	            	<h3 class="h05">Unique Items</h3>
+
+		            <p>STW boasts hundreds of new items including quest items, new weapons, new armour, new items and much more! All sprited by the talented pixel artist <a href="https://twitter.com/TheJestex">Jestex</a>.</p> 
+
+	        			
+	            </div> 	            	               
+
+			   </div> <!-- /bgrid -->
+
+				<div class="bgrid feature">
+
+					<span class="icon"><img src="images/mmo_icon.png"></span>	              
+
+	            <div class="service-content">
+	            	<h3 class="h05">Massively Multiplayer</h3>
+
+		            <p>(When it is released) STW's Multiplayer will be in an MMORPG format - play with your friends in parties or solo, it is up to you. Thanks to all our Patreons for helping to pay for the servers!</p> 
+
+	         		
+	            </div>                
+
+				</div> <!-- /bgrid -->
+
+			   <div class="bgrid feature">
+
+			   	<span class="icon"><img src="images/patreon_icon.png"></span>	            
+
+	            <div class="service-content">	
+	            	<h3 class="h05">Support on Patreon</h3>
+
+		            <p>Super Terraria World is kept running by the generous donators on our <a href="https://www.patreon.com/SuperTerrariaWorld">Patreon page</a> - 100% of donations go towards the mod, and they are essential in order to keep servers running - not to mention the custom in-game rewards for donators!</p> 
+
+	        			
+	            </div>	               
+
+			   </div> <!-- /bgrid -->
+
+			   <div class="bgrid feature">
+
+			   	<span class="icon"><img src="images/download_icon.png"></span>	   	           
+
+	            <div class="service-content">
+	            	 <h3 class="h05">Download</h3>
+
+		            <p>You can download STW from the <a href="https://forums.terraria.org/index.php?social-forums/super-terraria-world.436/">thread on the Terraria Community Forums</a>.<br>
+					Current version: 1.12.4a for Terraria 1.3.4</p> 
+	        			
+	            </div>	               
+
+			   </div> <!-- /bgrid -->
+
+	      </div> <!-- stw-list -->
+   		
+   	</div> <!-- stw-content -->
+		
+	</section> <!-- /stw -->
 	
-	<!-- Navigation -->
-	<div class="menu">
-	  <a class="menu__link" href="#t-backup" data-hover="T-Backup">T-Backup</a>
-	  <a class="menu__link" href="#stw" data-hover="STW">Super Terraria World</a>
-	  <a class="menu__link" href="#tlogomaker" data-hover="Terraria Logo Maker">Terraria Logo Maker</a>
-	  <a class="menu__link" href="#contact" data-hover="Contact Me">Contact Me</a>
-	  <a class="menu__link" href="#gallery" data-hover="Gallery">Gallery</a>
-	</div>
+
+	<!-- t-backup
+   ================================================== -->
+
+   <section id="t-backup" >
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+   			<h5>A Terraria Backup Utility</h5>
+   			<h1>T-Backup</h1>
+
+   			<p class="lead">T-Backup is a program that backs up worlds and player files from the game <a href="http://terraria.org/">Terraria</a>. It supports multiple profiles to allow different locations for mods. 
+							It is written in C#, and is intended to be run on Windows.<br>
+							T-Backup does not require an installer, simply run the downloaded executable to start.<br>
+							<b>A new, improved version is currently in the works!<b></p>
+   		</div>   		
+   	</div>   	
+
+      <div class="row flex-container">
+    
+         <div id="testimonial-slider" class="flexslider">
+
+            <ul class="slides">
+
+               <li>
+               	<div class="center" style="display: table; margin: 0 auto;">
+                    	<img src="images/t-backup01.png">
+                  </div>
+				  <br>
+                  Main menu - most options and most utilities on this window.						             
+             	</li> <!-- /slide -->
+
+               <li>
+               	<div class="center" style="display: table; margin: 0 auto;">
+                    	<img src="images/t-backup02.png">
+                  </div>
+				  <br>
+                  Profile window - enables T-Backup to be used with mods.						             
+             	</li> <!-- /slide -->
+
+				<li>
+               	<div class="center" style="display: table; margin: 0 auto;">
+                    	<img src="images/t-backup03.png">
+                  </div>
+				  <br>
+                  Restore window - restore backups back into Terraria files.						             
+             	</li> <!-- /slide --> 
+
+            </ul> <!-- /slides -->
+
+         </div> <!-- /testimonial-slider -->         
+        
+      </div> <!-- /flex-container -->
+
+	  <br><br>
+	  <div class="col-twelve">
+			 <p class="lead"><a href="https://github.com/darthmorf/T_Backup">Source code</a> and <a href="https://github.com/darthmorf/T_Backup/releases">downloads</a> on GitHub! <br>
+			 Check the <a href="https://forums.terraria.org/index.php?threads/t-backup-backup-your-worlds-and-players-with-ease.33697/">Terraria Forums thread</a> for more info.</p>
+		</div>
+
+   </section> <!-- /t-backup --> 
+
+
+   <!-- tlogomaker Section
+   ================================================== -->
+   <section id="tlogomaker">
+
+	<!--<div class='video-link'>
+	   	<a href="#terrarialogomaker01-video-popup"><img src="images/play-button.png" height="100" width="100" alt="">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+		<a href="#terrarialogomaker02-video-popup"><img src="images/play-button.png" height="100" width="100" alt=""></a>
+	</div><br> -->
+
+   <div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+   			<h5>A Custom Terraria Logo Maker</h5>
+   			<h1>Terraria Logo Maker</h1>
+
+   			Terraria logo maker is a tool that allows you to create custom logos like the one from the game <a href="http://terraria.org/">Terraria</a>. It has support for custom themes, but only includes 'Overworld' at the moment. 
+				    Once more themes have been made, they will be added as optional additional downloads. If you wish you can create your own theme using this <a href="http://forums.terraria.org/index.php?threads/program-darthmorfs-terraria-logo-maker.48889/#Create">tutorial</a>.<br>
+					Terraria Logo Maker is written in C# and intended to be run on Windows. Simply extract the zip folder and you're ready to go.<br>
+					<br>
+   		</div>   		
+   	</div>   	
+	   <img src="images/terrarialogomaker.gif">
+	  <div class="col-twelve">
+			 <p class="lead"><a href="https://github.com/darthmorf/Terraria-Logo-Maker">Source code</a> and <a href="https://github.com/darthmorf/Terraria-Logo-Maker/releases">downloads</a> on GitHub! <br>
+			 Check the <a href="http://forums.terraria.org/index.php?threads/program-darthmorfs-terraria-logo-maker.48889/">Terraria Forums thread</a> for more info.</p>
+		</div>
+
+   </section> <!-- /tlogomaker -->
+
+
+   <!-- contact
+   ================================================== -->
+   <section id="contact">
+
+   	<div class="row section-intro">
+   		<div class="col-twelve with-bottom-line">
+
+   			<h5>Powered by Jotforms!</h5>
+   			<h1>Contact Me</h1>
+
+   			<p class="lead">I'm happy to here any feedback you have about the site, any of the stuff on it, or anything else!</p>
+
+   		</div>   
+		   <br><br>	&nbsp;
+		   <script type="text/javascript" src="https://form.jotformeu.com/jsform/70644998893377"></script>	
+   	</div>
+
+   </section> <!-- /contact --> 
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="footer-bottom">
+
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright darthmorf</span> 
+		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+		         </div>
+
+		         <div id="go-top" style="display: block;">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon ion-android-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+
+      	</div> <!-- /footer-bottom -->     	
+
+      </div>
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-1.11.3.min.js"></script>
+   <script src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
 </html>
