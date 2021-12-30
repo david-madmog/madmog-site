@@ -8,22 +8,6 @@
             <CONT>London N10 1EA</CONT><CONT>England</CONT></ADDR>
     <PHON>020 8444 6223</PHON>
   </SUBM>
-  <INDI ID="I0">
-    <NAME>Test /Poirier/</NAME>
-    <SEX>M</SEX>
-    <BIRT>
-      <DATE>16 May 1967</DATE>
-      <PLAC>Bishop's Stortford</PLAC>
-      <NOTE>Birth Note</NOTE>
-    </BIRT>
-    <FAMS REF="F1">
-    </FAMS>
-    <FAMC REF="F2">
-    </FAMC>
-    <EVEN>David<TYPE>AKA</TYPE></EVEN>
-    <IMG>David Poirier.Thumb.JPG</IMG>
-    <SOUR REF="S2" />
-  </INDI>
   <INDI ID="I1">
     <NAME>David Simon /Poirier/</NAME>
     <SEX>M</SEX>

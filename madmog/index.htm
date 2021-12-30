@@ -1,34 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Mad Mog</title></head>
-<body background="./7back.gif" bgcolor="#FFFFFF">
-<table border="0" cellpadding="5" width="100%">    <tbody>
-  <tr>        
-    <td>Welcome to the<p><font size="7">MAD MOG Website</font></p></td>        
-    <td><table border="0"><tbody>
-      <tr>                
-        <td><img src="./bombaas3.gif" alt="A Mad Mog" width="240" height="180"></td>
-        <td valign="bottom">'Tonic' has his <br>                tongue out again</td>
-      </tr></tbody></table>        
-    </td>
-  </tr></tbody></table>
-<table border="0" width="100%"><tbody>
-  <tr>        
-    <td><p align="center"><img src="./t3c301.jpg" alt="Nice Cat Pic" align="middle" border="1" width="280" height="280"></p></td>        
-    <td valign="top">
-      <p align="left"><font size="5">Links</font></p>        
-      <p align="left"><a href="./aboutus.htm">About Us</a><br>Who we are and what we're up to.</p>
-      <p align="left"><a href="./TREE/IndiTree.htm">The Poirier family tree</a><br>	The Poirier &amp; Hay family trees</p>
-      <p align="left"><a href="./projects/projects.htm">David's Web Projects</a><br>	The location for David's various Web and programming projects</p>
-      
+<html>
+<head>
+<title>Individual's tree</title>
 
-<p align="left">	<a href="http://www.fivesixsevenjudo.co.uk/">Five Six Seven Judo Club</a></p><br>
-                </td>
-  </tr></tbody></table>
-<hr>
-<table border="0" width="100%"><tbody>
-  <tr>        
-    <td width="33%">Site permanently under construction<br><img src="./atwork89.gif" width="35" height="35"><br>Last update 19 Aug 2016</td>
-    <td width="33%"><p align="center"><font size="2">Comments        and suggestions? Send mail to </font><a href="mailto:postmaster@madmog.demon.co.uk"><font size="2">mailto:postmaster@madmog.demon.co.uk</font></a></p>     </td>
-    <td align="right" width="33%"></td>    
-</tr></tbody></table>
+
+<link rel="stylesheet" href="tree.css">
+
+<script type="text/javascript" src="IndiTree.js" ></script>
+
+<script type="text/javascript" language="javascript">
+
+// OK, I know we hate Globals, but this means we can load it once and reference it everywhere, and move around easily.
+  var xml ;
+
+  var ImagePath = "Imgs/" ;
+  
+function DevSampleXML() {
+text = 
+'<GED>' +
+'<INDI ID="I1">' +
+'    <NAME>David Simon /Poirier/</NAME>' +
+'    <SEX>M</SEX>' +
+'    <BIRT>' +
+'      <DATE>16 May 1967</DATE>' +
+'      <PLAC>Bishops Stortford</PLAC>' +
+'      <NOTE>NOT Born at 96 Colney Hatch Lane</NOTE>' +
+'    </BIRT>' +
+'    <DEAT>' +
+'      <DATE>11 Nov 1989</DATE>' +
+'      <PLAC>Hemel Hempstead</PLAC>' +
+'    </DEAT>' +
+'    <FAMS REF="F1">' +
+'    </FAMS>' +
+'    <FAMC REF="F2">' +
+'    </FAMC>' +
+'    <IMG>David Poirier.Thumb.png</IMG>' +
+'    <NOTE>' +
+'            \"My father\" [Henrys father, i.e. Arthur] told me that originally the' +
+'            Birnbaums came from Spain. They went to Holland at the time of the Spanish Inquisition, eventually adopting the Dutch/German name ofBirnbaum, and becoming Ashkenazi.In an old Prayer book which I [HP] believe once belonged to BerlBirnbaum I found a slip of paper. On it was written Rabbi Moses ben Naimon 1135-1204 Born Cordoba This was of course Moses Mamonides. It would be exciting if he wasindeed an ancestor. There is also a reference to Rabbi SchlaimohYelchaki - born in france 1040 died 1105.</NOTE>' +
+'  </INDI>' +
+'  <INDI ID="I2">' +
+'    <NAME>Jenny Synn&#246;va /Hay/</NAME>' +
+'    <SEX>F</SEX>' +
+'    <BIRT>' +
+'      <DATE>14 MAR 1967</DATE>' +
+'    </BIRT>' +
+'    <FAMS REF="F1">' +
+'    </FAMS>' +
+'    <FAMC REF="F5">' +
+'    </FAMC>' +
+'  </INDI>' +
+'  <INDI ID="I3">' +
+'    <NAME>Henry /Poirier/</NAME>' +
+'    <SEX>M</SEX>' +
+'    <BIRT>' +
+'      <DATE>2 Aug 1931</DATE>' +
+'    </BIRT>' +
+'    <FAMS REF="F2">' +
+'    </FAMS>' +
+'    <FAMC REF="F45">' +
+'    </FAMC>' +
+'   <IMG>Dad Skiing portrait.png</IMG>' +
+'  </INDI>' +
+'  <FAM ID="F1">' +
+'    <HUSB REF="I1">' +
+'    </HUSB>' +
+'    <WIFE REF="I2">' +
+'    </WIFE>' +
+'    <CHIL REF="I26">' +
+'    </CHIL>' +
+'    <CHIL REF="I313">' +
+'    </CHIL>' +
+'    <CHIL REF="I370">' +
+'    </CHIL>' +
+'    <MARR>' +
+'      <DATE>17 JUL 1993</DATE>' +
+'    </MARR>' +
+'  </FAM>' +
+'  <FAM ID="F2">' +
+'    <HUSB REF="I3">' +
+'    </HUSB>' +
+'    <WIFE REF="I4">' +
+'    </WIFE>' +
+'    <CHIL REF="I5">' +
+'    </CHIL>' +
+'    <CHIL REF="I6">' +
+'    </CHIL>' +
+'    <CHIL REF="I1">' +
+'    </CHIL>' +
+'    <CHIL REF="I11">' +
+'    </CHIL>' +
+'    <CHIL REF="I111">' +
+'    </CHIL>' +
+'    <CHIL REF="I11111">' +
+'    </CHIL>' +
+'    <MARR>' +
+'      <DATE>30 AUG 1959</DATE>' +
+'    </MARR>' +
+'  </FAM>' +
+'</GED>'
+
+  return text ;
+}
+
+function getXYpos(elem)
+{
+   if (!elem)
+   {
+      return {"x":0,"y":0};
+   }
+   var xy={"x":elem.offsetLeft,"y":elem.offsetTop}
+   var par=getXYpos(elem.offsetParent);
+   for (var key in par)
+   {
+      xy[key]+=par[key];
+   }
+   return xy;
+}
+
+function SizeBigTree() {
+    var overlay = document.getElementById("CTD") ;
+    var big_coordinates=getXYpos(document.getElementById("CTX"));
+    var bp_x = big_coordinates['x'];
+    big_coordinates=getXYpos(document.getElementById("family"));
+    var bp_y = big_coordinates['y'];
+
+    // set these values for the new created element
+    overlay.style.left =  bp_x + 'px';
+    overlay.style.top = bp_y + 'px';
+    overlay.style.width = document.getElementById("CTX").offsetWidth ;
+    overlay.style.height = document.getElementById("CTX").offsetHeight + document.getElementById("family").offsetHeight ;
+}
+
+function SizeIndexHolder() {
+    var IH = document.getElementById("indexHolder") ;
+    var body = document.getElementsByTagName('body')[0] ;
+    var big_coordinates=getXYpos(document.getElementById("index"));
+    var bp_y = big_coordinates['y'];
+
+    // set these values for the new created element
+    IH.style.height = body.offsetHeight - bp_y ;
+}
+
+function resize() {
+    SizeBigTree() ;
+    SizeIndexHolder() ;
+
+    DrawTree("CTFF") ;                      
+    DrawTree("CTFM") ;                      
+    DrawTree("CTMF") ;                      
+    DrawTree("CTMM") ;                      
+    DrawTree("CTF") ;                      
+    DrawTree("CTM") ;                      
+    DrawTree("CT") ;                      
+}
+
+function loadInitialPage() {
+//  try {
+
+    xml=loadXMLDoc("DAVID.XML");
+
+    resize() ;
+    
+    LoadIndiIndex("index") 
+  
+    var IndiID = "I1";
+    loadIndividual(IndiID) ;
+//  } catch(e) {
+//    alert('An error has occurred: '+e.message)
+//  }
+}
+
+</script>
+
+
+
+</head>
+<body onload="loadInitialPage();" onresize="resize();">
+
+<div id="Header">
+<TABLE WIDTH="100%">
+<TR><TD WIDTH="20%">
+Family tree prepared by:<BR>
+David Poirier<BR>
+96 Colney Hatch Lane<BR>
+London N10 1EA<BR>
+England<BR>
+020 8444 6223<BR></TD>
+<TD ALIGN=RIGHT>
+<A HREF="../index.htm">[Home]</A>
+</TD></TR></TABLE></div>
+
+<div id="indexHolder">
+  <form>
+    Filter:<br />
+    <input type="text" name="filter" id="filter" oninput="TextEntry();"/>
+  </form>
+  <div id="index"></div>
+</div>
+<div id="details">
+  <div id="CTD"><canvas id="CT" height="50" width="600" fork="3"></canvas></div>
+
+  <h1 id = "Title" >Hello World</h1>
+
+  <table id="maintable">
+    <tr id="grandparents">
+      <td id="gHFF" >Father's Father</td>
+      <td><canvas id="CTFF" height="50" width="600" fork="-1"></canvas></td>
+      <td id="gHFM" >Father's Mother</td>
+      <td>&nbsp;</td>
+      <td id="gHMF" >Mother's Father</td>
+      <td><canvas id="CTFM" height="50" width="600" fork="-1"></canvas></td>
+      <td id="gHMM" >Mother's Mother</td>
+      <td>&nbsp;</td>
+      <td id="gWFF" >Father's Father</td>
+      <td><canvas id="CTMF" height="50" width="600" fork="-1"></canvas></td>
+      <td id="gWFM" >Father's Mother</td>
+      <td>&nbsp;</td>
+      <td id="gWMF" >Mother's Father</td>
+      <td><canvas id="CTMM" height="50" width="600" fork="-1"></canvas></td>
+      <td id="gWMM" >Mother's Mother</td>
+    </tr>
+    <tr id = "parents">
+      <td>&nbsp;</td>
+      <td id="pHF">Father</td>
+      <td>&nbsp;</td>
+      <td><canvas id="CTF" height="50" width="600" fork="-1"></canvas></td>
+      <td>&nbsp;</td>
+      <td id="pHM">Mother</td>
+      <td colspan="3">&nbsp;</td>
+      <td id="pWF">Father</td>
+      <td>&nbsp;</td>
+      <td><canvas id="CTM" height="50" width="600" fork="-1"></canvas></td>
+      <td>&nbsp;</td>
+      <td id="pWM">Mother</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr id = "family">
+      <td colspan="2"> &nbsp; </td>
+      <td colspan="3" id="fH">Father</td>
+      <td colspan="2">&nbsp;</td>
+      <td><canvas id="CTI" fork="-1"></canvas></td>
+      <td colspan="2">&nbsp;</td>
+      <td colspan="3" id="fW">Mother</td>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr><td colspan="15"><canvas id="CTX" fork="3" height="50"></canvas></td></tr> 
+    <tr><td colspan="15">
+      <table width="100%">
+        <tr id="children">
+        </tr>
+      </table>
+    </td></tr>
+
+  </table>
+</div>  
+
 </body></html>
+
+
+
+
