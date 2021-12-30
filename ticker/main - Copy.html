@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Odds Ticker</title>
+<link rel="stylesheet" href="ticker.css">
+<script type="text/javascript" src="./config.json"></script>
+<script type="text/javascript" src="./loader.js"></script>
+
+</head>
+<body onload="OnBodyLoad();">
+
+<div id=main>
+<div id=Line1 class="ticker">
+	<table>
+			<tr class="L1">
+				<td id="L1T">Cleveland Browns</td><td id="L1P">-3</td><td id="L1M">-170</td><td id="L1OU" ROWSPAN="2">O/U 6.5</td>
+			</tr>
+			<tr class="L2">
+				<td id="L2T">Tampa Bay Bucanneers</td><td id="L2P">+3</td><td id="L2M">+145</td>
+			</tr>
+	</table>
+</div>
+
+<div id=input class="input">
+    <input type='file' id='fileinput'>
+<!--	<input type='checkbox' id='localLoad' value="local"> Local -->
+    <input type='button' id='btnLoad' value='Load' onclick='LoadContent();'>
+</div>
+<div id=debug class="debug">DEBUG</div>
+<div id=loading class="loading">...</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+Hi David,
+IGTDMHQ meant to be proper demo system, but it is repurposed for PGCB certification (PA).
+I believe it may be used for demoing, but contact Bill Phelan and Vladimir Mircevski.
+
+PRMSQAH is “a wild sandbo”. Vladimir Jovanovic often uses it for demonstrations. Not stable code, but functional.
+Contact Vlada if you mean to use it. AFAIK not used for any official purpose.
+
+
+1.	Dispatcher for IGTDMHQ  - 80.240.145.12
+2.	IP for PRMSQAH web 80.240.145.53
+
+80.240.145.53                     contentdemo2.beg.finsoft.com
+80.240.145.53                     mioskdemo2.beg.finsoft.com
+80.240.145.53                     sstdemo2.beg.finsoft.com
+80.240.145.53                     cdu3demo2.beg.finsoft.com
+
+
+
+I am aware that one picked to similar header valuesentries, but please notice that PRMSQAH is .finsoft.com,
+while IGTDMHQ is on igt.rs.
+
+

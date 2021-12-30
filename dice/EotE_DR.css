@@ -1,0 +1,102 @@
+@font-face {
+  font-family: SW;
+/*  src: url(Bazaronite.ttf); /* */
+  src: url("Starjedi.ttf"); /* */
+}
+
+@font-face {
+  font-family: EotE;
+/*  src: url(Bazaronite.ttf); /* */
+  src: url("EotE_Symbol-Regular_v1.otf"); /* */
+}
+
+body {
+
+}
+
+h1 {
+	color: black;
+	font-size: 28pt;
+	font-family: SW;  /* */
+	
+}
+
+td {
+	padding-left: 25px;
+	padding-right: 25px;
+/*	border-color: red;  
+	border-style: solid  /* */
+}
+
+input {
+	font-size: 28pt;
+	width: 100px;
+}
+
+button {
+	font-size: 28pt;
+	width: 100px;
+	height: 100px;
+}
+
+.QuickPick {
+	font-size: 16pt;
+	text-align: center;
+}
+
+
+.symbol {
+	font-size: 28pt;
+	font-family: EotE;  /* */
+    -webkit-text-stroke: 1px black;
+}
+
+.totalExtra {
+	display: inline;
+	color: gray;
+    -webkit-text-stroke: 0;
+	font-size: 66%;
+}
+
+.QPsymbol {
+/*	font-size: 16pt;  /* */
+	font-family: EotE;  /* */
+    -webkit-text-stroke: 1px black;
+}
+
+.Row {
+	font-size: 28pt;
+	font-family: Arial;  /* */
+}
+
+.qprow {
+	padding: 25px
+}
+
+.footer {
+	font-size: 8pt;
+	font-family: Arial;  /* */
+}
+
+.button {
+	font-size: 16pt;
+	width: 200px;
+	font-family: Arial;  /* */
+}
+
+.loading {
+	color: red;
+	display: none;
+}
+
+.input {
+	color: white;
+	display: block;
+}
+
+.debug {
+	color: white;
+	display: block;
+}
+
+    

@@ -1,0 +1,246 @@
+@font-face {
+  font-family: dotty;
+/*  src: url(Bazaronite.ttf); /* */
+  src: url("onlywif_.ttf"); /* */
+}
+
+body {
+	background: black;
+}
+
+td {
+	padding-left: 25px;
+	padding-right: 25px;
+/*	border-color: red;  
+	border-style: solid  /* */
+}
+
+.loading {
+	color: red;
+	display: none;
+}
+
+.input {
+	color: white;
+	display: block;
+}
+
+.debug {
+	color: white;
+	display: block;
+}
+
+.L1Style {
+	font-size: 28pt;
+	font-family: dotty;  /* */
+/*	font-family: arial;  /* */
+	color: ivory;	
+	text-align: right;
+	white-space: nowrap;
+}
+
+.row2 {
+	border-top-color: darkgray;
+	border-top-width: 1px;
+	border-top-style: solid; 
+}
+
+.L2Style {
+	font-size: 28pt;
+	font-family: dotty; /* */
+/*	font-family: arial; /* */
+	color: lightgreen;	
+	text-align: right;
+	white-space: nowrap;
+}
+
+.ticker {
+	height: 192px; 	
+	overflow: hidden;
+	position: relative;
+}
+
+.tickerTable1h {
+	border-collapse: collapse;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+
+    /* Starting position */
+       -moz-transform:translateX(0);
+       -webkit-transform:translateX(0);	
+       transform:translateX(0);
+
+ /* Apply animation to this element */	
+       -moz-animation: ticker1h var(--looptime) linear infinite;
+       -webkit-animation: ticker1h var(--looptime) linear infinite;
+       animation: ticker1h var(--looptime) linear infinite;
+}
+
+.tickerTable2h {
+	border-collapse: collapse;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+
+    /* Starting position */
+       -moz-transform:translateX(100%);
+       -webkit-transform:translateX(100%);	
+       transform:translateX(100%);
+
+ /* Apply animation to this element */	
+       -moz-animation: ticker2h var(--looptime) linear infinite;
+       -webkit-animation: ticker2h var(--looptime) linear infinite;
+       animation: ticker2h var(--looptime) linear infinite;
+}
+
+.tickerTable1v {
+	border-collapse: collapse;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+
+    /* Starting position */
+       -moz-transform:translateY(0);
+       -webkit-transform:translateY(0);	
+       transform:translateY(0);
+
+ /* Apply animation to this element */	
+       -moz-animation: ticker1v 500ms linear infinite;
+       -webkit-animation: ticker1v 500ms linear infinite;
+       animation: ticker1v 500ms linear infinite;
+}
+
+.tickerTable2v {
+ 	border-collapse: collapse;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 40px;
+    text-align: center;
+
+    /* Starting position */
+       -moz-transform:translateY(0);
+       -webkit-transform:translateY(0);	
+       transform:translateY(0);
+
+ /* Apply animation to this element */	
+       -moz-animation: ticker2v 500ms linear infinite;
+       -webkit-animation: ticker2v 500ms linear infinite;
+       animation: ticker2v 500ms linear infinite;
+}
+
+/* Move it (define the animation) */
+      @-moz-keyframes ticker1h {
+       0%   { -moz-transform: translateX(0); }
+       100% { -moz-transform: translateX(-100%); }
+      }
+      @-webkit-keyframes ticker1h {
+       0%   { -webkit-transform: translateX(0); }
+       100% { -webkit-transform: translateX(-100%); }
+      }
+      @keyframes ticker1h {
+       0%   { 
+       -moz-transform: translateX(0); /* Firefox bug fix */
+       -webkit-transform: translateX(0); /* Firefox bug fix */
+       transform: translateX(0); 	/* */	
+/*       -moz-transform: translateX(0); /* Firefox bug fix */
+/*       -webkit-transform: translateX(0); /* Firefox bug fix */
+/*       transform: translateX(0); 	/* */	
+
+       }
+       100% { 
+       -moz-transform: translateX(-100%); /* Firefox bug fix */
+       -webkit-transform: translateX(-100%); /* Firefox bug fix */
+       transform: translateX(-100%); 
+       }
+      }
+	  
+       @-moz-keyframes ticker2h {
+       0%   { -moz-transform: translateX(100%); }
+       100% { -moz-transform: translateX(0); }
+      }
+      @-webkit-keyframes ticker2h {
+       0%   { -webkit-transform: translateX(100%); }
+       100% { -webkit-transform: translateX(0); }
+      }
+      @keyframes ticker2h {
+       0%   { 
+       -moz-transform: translateX(100%); /* Firefox bug fix */
+       -webkit-transform: translateX(100%); /* Firefox bug fix */
+       transform: translateX(100%); 	/* */	
+/*       -moz-transform: translateX(0); /* Firefox bug fix */
+/*       -webkit-transform: translateX(0); /* Firefox bug fix */
+/*       transform: translateX(0); 	/* */	
+
+       }
+       100% { 
+       -moz-transform: translateX(0); /* Firefox bug fix */
+       -webkit-transform: translateX(0); /* Firefox bug fix */
+       transform: translateX(0); 
+       }
+      }
+	  
+	  
+      @-moz-keyframes ticker1v {
+       0%   { -moz-transform: translateY(0); }
+       100% { -moz-transform: translateY(-100%); }
+      }
+      @-webkit-keyframes ticker1v {
+       0%   { -webkit-transform: translateY(0); }
+       100% { -webkit-transform: translateY(-100%); }
+      }
+      @keyframes ticker1v {
+       0%   { 
+       -moz-transform: translateY(0); /* Firefox bug fix */
+       -webkit-transform: translateY(0); /* Firefox bug fix */
+       transform: translateY(0); 	/* */	
+/*       -moz-transform: translateX(0); /* Firefox bug fix */
+/*       -webkit-transform: translateX(0); /* Firefox bug fix */
+/*       transform: translateX(0); 	/* */	
+
+       }
+       100% { 
+       -moz-transform: translateY(-100%); /* Firefox bug fix */
+       -webkit-transform: translateY(-100%); /* Firefox bug fix */
+       transform: translateY(-100%); 
+       }
+      }
+	  
+	  	  
+      @-moz-keyframes ticker2v {
+       0%   { -moz-transform: translateY(100%); }
+       100% { -moz-transform: translateY(0); }
+      }
+      @-webkit-keyframes ticker2v {
+       0%   { -webkit-transform: translateY(100%); }
+       100% { -webkit-transform: translateY(0); }
+      }
+      @keyframes ticker2v {
+       0%   { 
+       -moz-transform: translateY(100%); /* Firefox bug fix */
+       -webkit-transform: translateY(100%); /* Firefox bug fix */
+       transform: translateY(100%); 	/* */	
+/*       -moz-transform: translateX(0); /* Firefox bug fix */
+/*       -webkit-transform: translateX(0); /* Firefox bug fix */
+/*       transform: translateX(0); 	/* */	
+
+       }
+       100% { 
+       -moz-transform: translateY(0); /* Firefox bug fix */
+       -webkit-transform: translateY(0); /* Firefox bug fix */
+       transform: translateY(0); 
+       }
+      }
+ 
+    

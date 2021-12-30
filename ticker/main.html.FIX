@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Odds Ticker</title>
+<link rel="stylesheet" href="ticker.css">
+<script type="text/javascript" src="config.json"></script>
+<script type="text/javascript" src="loader.js"></script>
+
+<script type="text/javascript">
+var config = {
+	"Local": false,
+	"Debug": true,
+	"RemotePath": "/cache/cduevents/US/1/50/SCREEN1/SHOWONCDU.json",
+	"RemoteServer": "http://contentdemo2.beg.finsoft.com",
+}
+
+// Global Variables
+var ReadyToLoadData;
+var CurrentGame;
+var JSONData;
+
+// Called on initialisation
+function OnBodyLoad() {
+	// Switch loading depending on local or web mode
+	if (config.Local) {
+		document.getElementById('input').style.display = "block";
+	} else {
+		document.getElementById('input').style.display = "none";
+		LoadContent();
+	}
+	
+	if (config.Debug) {
+		//
+	} else {
+		document.getElementById('debug').style.display = "none";
+	}
+	
+	CurrentGame = 0;
+	  
+	// set animation event handlers
+	var element = document.getElementById("Line1");
+	
+	try {
+		if (document.addEventListener) {                // For all major browsers, except IE 8 and earlier
+			document.getElementById('debug').innerText = "AEL Set 0" ;
+
+			element.addEventListener("animationiteration", AniLoop, false);
+			element.addEventListener("webkitAnimationIteration", AniLoop, false);
+
+			document.getElementById('debug').innerText = "AEL Set 1a" ;
+		} else if (document.attachEvent) {              // For IE 8 and earlier versions
+			document.attachEvent("animationiteration", AniLoop);
+			document.getElementById('debug').innerText = "AE Set" ;
+		}
+	} catch(error) {
+		document.getElementById('debug').innerText = error ;
+	}
+}
+
+// Called each time an entry has finished scrolling
+function AniLoop(event) {
+	document.getElementById('debug').innerText = "AniLoop Called" ;
+	
+	// So, if we're in web mode or have entered filename, refresh our data
+	if (ReadyToLoadData) {
+		LoadContent();
+		document.getElementById("debug").innerText = "Showing " + CurrentGame ;
+		CurrentGame += 1; 
+	} else {
+		// heartbeat
+		if (document.getElementById("debug").innerText == "DEBUG") {
+			document.getElementById("debug").innerText = "debug" ;
+		} else {
+			document.getElementById("debug").innerText = "DEBUG" ;
+		}
+	}
+  }
+
+// Called from two places: 
+//	1. the first time we're ready to load - varies depending on mode
+//	2. When we reach the end of the scroll, if we've been called before (ReadyToLoadData = true)
+function LoadContent() {
+	if (config.Local) {
+		loadFile();
+	} else {
+		NetLoadFile();
+	}
+	ReadyToLoadData = true;
+  }
+    
+// Loads a LOCAL file (used in debug mode)
+function loadFile() {
+}
+
+// Loads the data file
+function NetLoadFile() {
+	ShowLoading(true);
+	var JSONDoc = config.RemoteServer + config.RemotePath;
+	xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("get", JSONDoc, true ) ;
+
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			JSONData = JSON.parse(xmlhttp.response); 
+			ExtractJsonData();
+			ShowLoading(false);
+		}
+	};
+	
+    xmlhttp.send() ;
+  }
+
+// Parse the JSON data file, find the Event to display
+function ExtractJsonData() {
+	var MarketsWithGames = 0;
+
+	// Go through finding events with some markets
+	for (i = 0; i < JSONData.events.length; i++) {
+		console.log("E" + i + ": " + JSONData.events[i].participantnameaway + " @ " + JSONData.events[i].participantnamehome);
+		if ( JSONData.events[i].markets != null) {
+			
+			// see if this is the "n"th market with games, where "n" is the current one to display
+			if ( MarketsWithGames == CurrentGame ) {
+				ExtractEvent(JSONData.events[i])
+				
+				// Now found one, no need to continue
+				return;
+			} else {
+				// we have games, but this is not yet the one we need
+				MarketsWithGames += 1;
+			}
+		}
+	}
+	
+	// If we got here, we have insuffient events to reach the counter. 
+	// If we have ANY events with markets, reset counter and have another go
+	if (MarketsWithGames > 0) {
+		CurrentGame = 0;
+		ExtractJsonData();
+	}
+		
+}
+
+// Extract a single event's data into display grid
+function ExtractEvent(Event) {
+	// Set the team names
+	document.getElementById('L1T').innerText = Event.participantnameaway;
+	document.getElementById('L2T').innerText = Event.participantnamehome;
+	
+	// Now find the Points, Moneyline and totals markets
+	for (j = 0; j < Event.markets.length; j++) {
+		var Market = Event.markets[j]
+		console.log("M" + j + ": " + Market.name);
+		if ( Market.gameperiod == "1+") {
+			if ( Market.big3markettype == "ML") {
+				// Money line
+				document.getElementById('L1M').innerText =  Market.selections[0].priceus;
+				document.getElementById('L2M').innerText =  Market.selections[1].priceus;
+				// hadvalue: "A"
+			} else if ( Market.big3markettype == "PS") {
+				// Points spread
+				CMH = Market.selections[0].currentmatchhandicap;
+				if ( CMH > 0 ) {
+					document.getElementById('L1P').innerText = "+" + Market.selections[0].currentmatchhandicap;
+					document.getElementById('L2P').innerText = "-" + Market.selections[1].currentmatchhandicap;
+				} else {
+					document.getElementById('L1P').innerText = "" + Market.selections[0].currentmatchhandicap;
+					document.getElementById('L2P').innerText = "+" + -Market.selections[1].currentmatchhandicap;
+				}
+			} else if ( Market.big3markettype == "TP") {
+				// Total Points
+				document.getElementById('L1OU').innerText = "O/U " + Market.selections[0].currentmatchhandicap;
+			}
+		}
+	}
+}
+
+// Display little symbol to show we're working  
+function ShowLoading(Show) {
+	if (Show) {
+		document.getElementById('loading').style.display = "block"
+	} else {
+		document.getElementById('loading').style.display = "none"
+//		  document.getElementById('loading').innerHTML = document.getElementById('loading').innerHTML + ".";
+	}
+  }
+  
+</script>
+
+
+</head>
+<body onload="OnBodyLoad()">
+
+<div id=main>
+<div id=Line1 class="ticker">
+	<table>
+			<tr class="L1">
+				<td id="L1T">Cleveland Browns A</td><td id="L1P">-3</td><td id="L1M">-170</td><td id="L1OU" ROWSPAN="2">O/U 6.5</td>
+			</tr>
+			<tr class="L2">
+				<td id="L2T">Tampa Bay Bucanneers</td><td id="L2P">+3</td><td id="L2M">+145</td>
+			</tr>
+	</table>
+</div>
+
+<div id=input class="input">
+    <input type='file' id='fileinput'>
+<!--	<input type='checkbox' id='localLoad' value="local"> Local -->
+    <input type='button' id='btnLoad' value='Load' onclick='LoadContent()'>
+</div>
+<div id=debug class="debug">DEBUG</div>
+<div id=loading class="loading">...</div>
+
+</div>
+
+</body>
+</html>

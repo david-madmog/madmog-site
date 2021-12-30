@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Odds Ticker</title>
+<link rel="stylesheet" href="ticker.css">
+<script type="text/javascript" src="./config.json"></script>
+<script type="text/javascript" src="./loader.js"></script>
+
+</head>
+<body onload="OnBodyLoad();">
+
+<div id=main>
+<div id=Line1 class="ticker">
+	<table id="Table1" class="tickerTable1v" style="--looptime: 7s;" >
+			<tr class="L1 L1Style">
+				<td id="L1T" COLSPAN=2>Cleveland Browns</td><td id="L1P">-3</td><td id="L1M">-170</td><td id="L1OU" ROWSPAN="2">O/U 6.5</td>
+				<td id="L1T2" COLSPAN=2>Cleveland Browns</td><td id="L1P2">-3</td><td id="L1M2">-170</td><td id="L1OU2" ROWSPAN="2">O/U 6.5</td>
+			</tr>
+			<tr class="L2 L2Style">
+				<td id="L2T" COLSPAN=2>Tampa Bay Bucanneers</td><td id="L2P">+3</td><td id="L2M">+145</td>
+				<td id="L2T2" COLSPAN=2>Tampa Bay Bucanneers</td><td id="L2P2">+3</td><td id="L2M2">+145</td>
+			</tr>
+			<tr class="L1 L1Style row2">
+				<td id="L5T" COLSPAN=2>New England Patriots</td><td id="L5P">-10</td><td id="L5M">-250</td><td id="L5OU" ROWSPAN="2">O/U 16.5</td>
+				<td id="L5T2" COLSPAN=2>New England Patriots</td><td id="L5P2">-10</td><td id="L5M2">-250</td><td id="L5OU2" ROWSPAN="2">O/U 16.5</td>
+			</tr>
+			<tr class="L2 L2Style">
+				<td id="L6T" COLSPAN=2>Seattle Seahawks</td><td id="L6P">+10</td><td id="L6M">+200</td>
+				<td id="L6T2" COLSPAN=2>Seattle Seahawks</td><td id="L6P2">+10</td><td id="L6M2">+200</td>
+			</tr>
+	</table>
+	<table id="Table2" class="tickerTable2v" style="--looptime: 7s;">
+			<tr class="L3 L1Style">
+				<td id="L3T" COLSPAN=2>Cleveland Browns</td><td id="L3P">-3</td><td id="L3M">-170</td><td id="L3OU" ROWSPAN="2">O/U 6.5</td>
+				<td id="L3T2" COLSPAN=2>Cleveland Browns</td><td id="L3P2">-3</td><td id="L3M2">-170</td><td id="L3OU2" ROWSPAN="2">O/U 6.5</td>
+			</tr>
+			<tr class="L4 L2Style">
+				<td id="L4T" COLSPAN=2>Tampa Bay Bucanneers</td><td id="L4P">+3</td><td id="L4M">+145</td>
+				<td id="L4T2" COLSPAN=2>Tampa Bay Bucanneers</td><td id="L4P2">+3</td><td id="L4M2">+145</td>
+			</tr>
+			<tr class="L3 L1Style row2">
+				<td id="L7T" COLSPAN=2>New England Patriots</td><td id="L7P">-10</td><td id="L7M">-250</td><td id="L7OU" ROWSPAN="2">O/U 16.5</td>
+				<td id="L7T2" COLSPAN=2>New England Patriots</td><td id="L7P2">-10</td><td id="L7M2">-250</td><td id="L7OU2" ROWSPAN="2">O/U 16.5</td>
+			</tr>
+			<tr class="L4 L2Style">
+				<td id="L8T" COLSPAN=2>Seattle Seahawks</td><td id="L8P">+10</td><td id="L8M">+200</td>
+				<td id="L8T2" COLSPAN=2>Seattle Seahawks</td><td id="L8P2">+10</td><td id="L8M2">+200</td>
+			</tr>
+	</table>
+</div>
+
+<div id=input class="input">
+    <input type='file' id='fileinput'>
+<!--	<input type='checkbox' id='localLoad' value="local"> Local -->
+    <input type='button' id='btnLoad' value='Load' onclick='LoadContent();'>
+</div>
+<div id=debug class="debug">DEBUG</div>
+<div id=loading class="loading">...</div>
+
+</div>
+
+</body>
+</html>

