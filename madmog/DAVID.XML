@@ -266,17 +266,13 @@
   <INDI ID="I27">
     <NAME>Berl /Birnbaum/</NAME>
     <SEX>M</SEX>
-    <NOTE>
-            \"My father\" [Henry's father, i.e. Arthur] told me that originally the
-            Birnbaums came from Spain. They went to Holland at the time of theSpanish Inquisition, eventually adopting the Dutch/German name ofBirnbaum, and becoming Ashkenazi.In an old Prayer book which I [HP] believe once belonged to BerlBirnbaum I found a slip of paper. On it was written'Rabbi Moses ben Naimon 1135-1204 Born Cordoba'This was of course Moses Mamonides. It would be exciting if he wasindeed an ancestor. There is also a reference to Rabbi SchlaimohYelchaki - born in france 1040 died 1105.</NOTE>
+    <NOTE>"My father" [Henry's father, i.e. Arthur] told me that originally the Birnbaums came from Spain. They went to Holland at the time of theSpanish Inquisition, eventually adopting the Dutch/German name of Birnbaum, and becoming Ashkenazi.In an old Prayer book which I [HP] believe once belonged to Berl Birnbaum I found a slip of paper. On it was written'Rabbi Moses ben Naimon 1135-1204 Born Cordoba' This was of course Moses Mamonides. It would be exciting if he was indeed an ancestor. There is also a reference to Rabbi SchlaimohYelchaki - born in france 1040 died 1105.</NOTE>
     <SOUR REF="S1">
     </SOUR>
     <EMIG>
       <PLAC>Emigrated to Bucharest</PLAC>
     </EMIG>
-    <EVEN>
-            Bernard
-            <TYPE>AKA</TYPE></EVEN>
+    <EVEN>Bernard<TYPE>AKA</TYPE></EVEN>
     <FAMS REF="F10">
     </FAMS>
     <IMG>Berl Birnbaum.png</IMG>
@@ -321,16 +317,12 @@
   <INDI ID="I32">
     <NAME>Herman /Poirier/</NAME>
     <SEX>M</SEX>
-    <NOTE>
-            He Ran away from home aged ?17, went to Marseille, changed his name to
-            Poirier and after a couple of years 'Jumped ship' in Punta Arenas,Chile. This, before the Panama canal, was a busy port and he made alot of money trading with the natives for Furs. He eventually opened atrading post in Punta Arenas, mostly dealing with Furs, but alsoacting as a Ship's chandler. (He helped to equip one of the Shackeltonexpeditions to the south pole). He came back to England where hemarried Sara Romanovsky. Her mother would only allow her to go back toChile if her sisters and their Husbands accompanied her - so the Dunnsand Levys went too, thinking that like Henry they would make theirfortune. The Dunns were quickly disillusioned, but the Levys stayedon. Henry died in 1917 aged 44, and in the early 1920's Sara broughtthe family back to England.</NOTE>
+    <NOTE>He Ran away from home aged ?17, went to Marseille, changed his name to Poirier and after a couple of years 'Jumped ship' in Punta Arenas, Chile. This, before the Panama canal, was a busy port and he made a lot of money trading with the natives for Furs. He eventually opened a trading post in Punta Arenas, mostly dealing with Furs, but also acting as a Ship's chandler. (He helped to equip one of the Shackelton expeditions to the south pole). He came back to England where he married Sara Romanovsky. Her mother would only allow her to go back to Chile if her sisters and their Husbands accompanied her - so the Dunns and Levys went too, thinking that like Henry they would make their fortune. The Dunns were quickly disillusioned, but the Levys stayed on. Henry died in 1917 aged 44, and in the early 1920's Sara brought the family back to England.</NOTE>
     <BIRT>
       <DATE>20 Mar 1871</DATE>
       <PLAC>Bucharest</PLAC>
     </BIRT>
-    <EVEN>
-            Henry, Enrique
-            <TYPE>AKA</TYPE></EVEN>
+    <EVEN>Henry, Enrique<TYPE>AKA</TYPE></EVEN>
     <FAMS REF="F44">
     </FAMS>
     <FAMC REF="F10">
@@ -454,7 +446,7 @@
     </FAMC>
   </INDI>
   <INDI ID="I49">
-    <NAME>/Haiberg/</NAME>
+    <NAME>? /Haiberg/</NAME>
     <SEX>M</SEX>
     <FAMS REF="F14">
     </FAMS>
@@ -628,13 +620,13 @@
     </FAMC>
   </INDI>
   <INDI ID="I73">
-    <NAME>/TOREN/</NAME>
+    <NAME>/Toren/</NAME>
     <SEX>M</SEX>
     <FAMS REF="F25">
     </FAMS>
   </INDI>
   <INDI ID="I74">
-    <NAME>Alina /TOREN/</NAME>
+    <NAME>Alina /Toren/</NAME>
     <SEX>F</SEX>
     <FAMC REF="F25">
     </FAMC>
@@ -2642,9 +2634,6 @@
   <INDI ID="I327">
     <NAME>?</NAME>
     <SEX>F</SEX>
-    <BIRT>
-      <PLAC>Italy</PLAC>
-    </BIRT>
     <FAMS REF="F117">
     </FAMS>
   </INDI>

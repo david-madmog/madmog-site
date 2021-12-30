@@ -1,5 +1,5 @@
 var config = {
-	"Local": false,
+	"Local": true,
 	"Debug": false,
 	"RemotePath": "/cache/cduevents/US/1/50/SCREEN1/SHOWONCDU.json",
 	"RemoteServer": "http://contentdemo2.beg.finsoft.com",
