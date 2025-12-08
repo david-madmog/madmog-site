@@ -1,0 +1,13 @@
+<?xml-stylesheet type="text/xsl" href="news.xsl"?>
+<news>
+  <article>
+    <title>Company launched</title>
+    <date>8 December 2026</date>
+    <body>
+		<text>Blanquilla registered at companies house</text>
+		<pic>./NewsPics/pear-tree-front.jpg</pic>
+		<text />
+    </body>
+  </article>
+
+</news>

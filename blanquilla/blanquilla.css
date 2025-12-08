@@ -1,0 +1,112 @@
+
+
+body {
+  font-family: "Verdana", "Arial", Sans-serif; 
+  color: darkblue;
+  background-color: white;
+}
+	
+h2 {
+    background-color: #E1F5FE;
+}
+
+
+.joinform {
+  font-family: "Times New Roman",
+        Times, serif;
+  color: black;
+  background-color: white ;
+  background-image: none ;
+}
+
+.joinform h2 {
+    background-color: white;
+}
+	
+.pseudolink {
+    color: darkblue ;
+    text-align: center ;
+    background-color: #E1F5FE;
+    padding: 10px;
+    width: 12%;
+}
+
+.pseudolink:hover {
+    color:white; 
+    background-color: darkblue ;
+} 
+
+.Bordered {
+    border: 1px darkblue;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+.Bordered td {
+    border: 1px darkblue;
+    border-style: solid;
+    padding: 5px;
+}
+
+.GalleryImage {
+    height: 200;
+    margin: 5;
+}
+
+#middle {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#menu {
+  float: left ;  
+//  left: 200;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 14px;
+}
+
+#watermark {
+  position: absolute;
+  opacity: 0.15;
+  z-index: -1;
+  display: none; 
+}
+
+#bod {
+  position: relative;
+  clear: left;
+}
+
+.DateCell
+{
+	padding-left: 10;
+	padding-right: 10;
+}
+
+.menubar
+{
+    background-color: #E1F5FE;
+}
+
+#menupad {
+  width: 200px;
+//  display: none; 
+}
+
+#bodyheader {
+  width: 100% ;
+}
+
+.TCunderline {
+  border-bottom: black;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+#footer {
+  clear:both;
+  font-size: x-small;
+}

@@ -1,0 +1,1 @@
+C:\Users\david\AppData\Local\Vivaldi\Application\vivaldi.exe  --allow-file-access-from-files file:///C:/Users/david/OneDrive/Documents/Development/Blanquilla/index.html
