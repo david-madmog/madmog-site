@@ -1,7 +1,11 @@
 
 
 body {
-  font-family: "Verdana", "Arial", Sans-serif; 
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
   color: darkblue;
   background-color: white;
 }
@@ -9,24 +13,12 @@ body {
 h2 {
     background-color: #E1F5FE;
 }
-
-
-.joinform {
-  font-family: "Times New Roman",
-        Times, serif;
-  color: black;
-  background-color: white ;
-  background-image: none ;
-}
-
-.joinform h2 {
-    background-color: white;
-}
 	
 .pseudolink {
     color: darkblue ;
     text-align: center ;
     background-color: #E1F5FE;
+	font-size: 30pt;
     padding: 10px;
     width: 12%;
 }
@@ -60,6 +52,7 @@ h2 {
 }
 
 #menu {
+	width: 100%;
   float: left ;  
 //  left: 200;
   text-align: center;
@@ -73,6 +66,10 @@ h2 {
   opacity: 0.15;
   z-index: -1;
   display: none; 
+}
+
+#headname {
+	font-size: 72px
 }
 
 #bod {
@@ -92,12 +89,21 @@ h2 {
 }
 
 #menupad {
-  width: 200px;
+//  width: 200px;
 //  display: none; 
+	font-size: 36pt;
+}
+
+#header {
+  width: 100% ;
 }
 
 #bodyheader {
   width: 100% ;
+}
+
+#contactTable > tbody > tr > td {
+	padding: 5;
 }
 
 .TCunderline {

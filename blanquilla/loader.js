@@ -14,17 +14,51 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 	
 	console.log ('3-' + JSONResponse.news.length);
 	for (i = 0; i < JSONResponse.news.length; i++) {
-		console.log("E" + i + ": " + JSONResponse.news[i].title );
+		let article = JSONResponse.news[i]
+		console.log("E" + i + ": " + article.title + "-" + article.body.length );
 		const head = document.createElement("h2");
-		const headnode = document.createTextNode(JSONResponse.news[i].title);
+		const headnode = document.createTextNode(article.title);
 		head.appendChild(headnode);
 		injectRoot.appendChild(head);
 
 		const date = document.createElement("h3");
-		const datenode = document.createTextNode(JSONResponse.news[i].date);
+		const datenode = document.createTextNode(article.date);
 		date.appendChild(datenode);
 		injectRoot.appendChild(date);
 		
+		
+		for (j=0; j < article.body.length; j++) {
+			for ( var prop in article.body[j] ) {
+				console.log("B" + j + ": " + prop + "-" + article.body[j][prop])
+				var elm ;
+				var elmnode ;
+				switch (prop) {
+					case "text":
+						elm = document.createElement("p");
+						elmnode = document.createTextNode(article.body[j][prop]);
+						elm.appendChild(elmnode);
+						break;
+					case "link":
+						elm = document.createElement("a");
+						elmnode = document.createAttribute("href");
+						elmnode.value = article.body[j][prop]
+						elm.setAttributeNode(elmnode);
+						elmnode = document.createAttribute("target");
+						elmnode.value = "_blank"
+						elm.setAttributeNode(elmnode);
+						elmnode = document.createTextNode(article.body[j][prop]);
+						elm.appendChild(elmnode);
+						break;
+					case "pic":
+						elm = document.createElement("img");
+						elmnode = document.createAttribute("src");
+						elmnode.value = article.body[j][prop]
+						elm.setAttributeNode(elmnode);
+						break;
+				}
+				injectRoot.appendChild(elm);
+			}
+		}
 	}
 }
 

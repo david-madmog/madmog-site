@@ -1,0 +1,20 @@
+{
+	"news": [
+		{
+			"title": "Company Launched",
+			"date": "8 December 2026",
+			"body": [
+				{"text":"Blanquilla registered at companies house"}
+			]
+		},
+		{
+			"title": "Website Launched",
+			"date": "9 December 2026",
+			"body": [
+				{"text":"Website is go"},
+				{"pic":"./NewsPics/pear-tree-front.jpg"},
+				{"link":"DavidCV.2025.pdf"}
+			]
+		}
+	]
+}
