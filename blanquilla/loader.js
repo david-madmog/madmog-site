@@ -16,15 +16,21 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 	for (i = 0; i < JSONResponse.news.length; i++) {
 		let article = JSONResponse.news[i]
 		console.log("E" + i + ": " + article.title + "-" + article.body.length );
+		const div = document.createElement("div")
+		var divnode = document.createAttribute("class");
+		divnode.value = "aboutSection"
+		div.setAttributeNode(divnode);
+		injectRoot.appendChild(div);
+				
 		const head = document.createElement("h2");
 		const headnode = document.createTextNode(article.title);
 		head.appendChild(headnode);
-		injectRoot.appendChild(head);
+		div.appendChild(head);
 
 		const date = document.createElement("h3");
 		const datenode = document.createTextNode(article.date);
 		date.appendChild(datenode);
-		injectRoot.appendChild(date);
+		div.appendChild(date);
 		
 		
 		for (j=0; j < article.body.length; j++) {
@@ -56,7 +62,7 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 						elm.setAttributeNode(elmnode);
 						break;
 				}
-				injectRoot.appendChild(elm);
+				div.appendChild(elm);
 			}
 		}
 	}

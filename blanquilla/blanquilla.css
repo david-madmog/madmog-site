@@ -1,49 +1,56 @@
 
+:root {
+//  --light-bg-colour: #E1F5FE;
+//  --fgcolour: darkblue;
+  
+  --light-bg-colour: #cfdbad;
+  --fgcolour: #587e11;
+}
+
 
 body {
   font-family: "Zalando Sans SemiExpanded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-size: 24pt;
 
-  color: darkblue;
+  color: var(--fgcolour);
   background-color: white;
 }
 	
 h2 {
-    background-color: #E1F5FE;
+    background-color: var(--light-bg-colour);
+	padding: 7;
+    border-radius: 10px;
+}
+
+.menubar
+{
+    background-color: var(--light-bg-colour);
+    border-radius: 10px;
+}
+
+#menupad {
+//  width: 200px;
+//  display: none; 
+	font-size: 30pt;
 }
 	
 .pseudolink {
-    color: darkblue ;
+    color: var(--fgcolour) ;
     text-align: center ;
-    background-color: #E1F5FE;
+    background-color: var(--light-bg-colour);
 	font-size: 30pt;
     padding: 10px;
     width: 12%;
+    border-radius: 10px;
 }
 
 .pseudolink:hover {
     color:white; 
-    background-color: darkblue ;
+    background-color: var(--fgcolour) ;
 } 
-
-.Bordered {
-    border: 1px darkblue;
-    border-style: solid;
-    border-collapse: collapse;
-}
-
-.Bordered td {
-    border: 1px darkblue;
-    border-style: solid;
-    padding: 5px;
-}
-
-.GalleryImage {
-    height: 200;
-    margin: 5;
-}
 
 #middle {
   position: relative;
@@ -63,7 +70,7 @@ h2 {
 
 #watermark {
   position: absolute;
-  opacity: 0.15;
+  opacity: 0.05;
   z-index: -1;
   display: none; 
 }
@@ -73,25 +80,15 @@ h2 {
 }
 
 #bod {
-  position: relative;
-  clear: left;
+	position: relative;
+	clear: left;
+	padding: 15;
+	justify-content: center;
+    display: flex;
 }
 
-.DateCell
-{
-	padding-left: 10;
-	padding-right: 10;
-}
-
-.menubar
-{
-    background-color: #E1F5FE;
-}
-
-#menupad {
-//  width: 200px;
-//  display: none; 
-	font-size: 36pt;
+#bodybody {
+	max-width: 1170;
 }
 
 #header {
@@ -102,17 +99,30 @@ h2 {
   width: 100% ;
 }
 
-#contactTable > tbody > tr > td {
-	padding: 5;
+#strap {
+	font-size: 24pt;
+	display:inline-block; 
+	width:100%;
+	align: left;
 }
 
-.TCunderline {
-  border-bottom: black;
-  border-bottom-style: solid;
-  border-bottom-width: thin;
+#contactTable > tbody > tr > td {
+	padding: 5;
+    border-radius: 10px;
+	font-size: 22pt;
+}
+
+.aboutSection {
+	box-shadow: 0px 0px 35px 15px var(--light-bg-colour);
+	padding: 15;
+    border-radius: 10px;
+	margin: 15;
 }
 
 #footer {
-  clear:both;
-  font-size: x-small;
+	clear:both;
+	font-size: small;
+    background-color: var(--light-bg-colour);
+    border-radius: 10px;
+	padding: 15;
 }
