@@ -221,6 +221,12 @@ h2 {
 	grid-template-columns: 1fr 2fr;
 }
 
+.about-detail-data img[src*="LI-In-Bug"] {
+  vertical-align: middle;
+  display: inline-block;
+  align-self: center;
+}
+
 @media screen and (max-width:762px), screen and (max-device-width:762px) {
 	.contactTable {
 	  grid-template-columns: 1fr; /* Revert to single column */
