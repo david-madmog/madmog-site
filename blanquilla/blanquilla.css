@@ -265,3 +265,69 @@ h2 {
     margin: 10px auto;
 	width: 80%;
 }
+
+@media screen and (max-width:532px), screen and (max-device-width:532px), screen and (orientation: portrait) and (max-width:700px) {
+  body {
+    font-size: 11pt;
+  }
+  .header,
+  .menu,
+  .bod,
+  .footer {
+    width: 98% !important;
+    margin: 4px auto !important;
+    border-radius: 8px !important;
+  }
+  .menubar {
+    font-size: 16pt;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+  }
+  .pseudolink {
+    font-size: 18pt;
+    padding: 7px;
+  }
+  .menubar img {
+    width: 48px !important;
+    height: auto !important;
+    margin: 0 6px !important;
+  }
+  .menubar img[alt="Blanquilla Logo"] {
+    display: block !important;
+    margin: 0 auto 1vw auto !important;
+    width: 22vw !important;
+    min-width: 60px;
+    max-width: 120px;
+  }
+  #strap {
+    font-size: 13pt;
+    padding: 0 2px;
+  }
+  #strap h3 {
+    font-size: 13pt;
+    padding-left: 0;
+  }
+  .aboutSection {
+    padding: 10px;
+    margin: 4px;
+  }
+  .aboutSection h3 {
+    font-size: 13pt;
+    gap: 4px;
+  }
+  .aboutSection h3 img {
+    height: 18px !important;
+    margin-right: 3px;
+  }
+  .about-detail-title,
+  .about-detail-data {
+    font-size: 11pt;
+    word-break: break-word;
+  }
+  .contactTable {
+    gap: 4px;
+  }
+  #headname {
+    font-size: 32px;
+  }
+}
