@@ -14,7 +14,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18pt;
+  font-size: 16pt;
 
   color: var(--fgcolour);
   background-color: white;
@@ -27,12 +27,13 @@ h2 {
     border-radius: var(--border-rad);
 }
 
-
+/*
 @media screen and (width <= 768px) {
 	body {  
 		font-size: 20pt;
 	}
 }
+*/
 
 /* Menu and headers */
 .header {
@@ -175,10 +176,20 @@ h2 {
 
 /* Specific for contact page */
 
-#contactTable > tbody > tr > td {
-	padding: 5;
-    border-radius: var(--border-rad);
-	font-size: 22pt;
+.contactTable {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (width <= 768px) {
+	.contactTable {
+	  grid-template-columns: 1fr; /* Revert to single column */
+	}
+	
+	.about-detail-title {
+		margin-top: 15px;
+	}
 }
 
 /* Footer (all pages) */
@@ -189,5 +200,5 @@ h2 {
 	font-size: small;
     background-color: var(--light-bg-colour);
     border-radius: 10px;
-	padding: 15;
+	padding: 15px;
 }
