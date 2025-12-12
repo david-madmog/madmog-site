@@ -132,6 +132,11 @@ h2 {
 	display:inline-block; 
 	width: 100%;
 	align: left;
+	font-weight: thin;
+}
+
+#strap h3 {
+  font-weight: 400;
 }
 
 @media screen and (max-width:762px), screen and (max-device-width:762px)  {
