@@ -22,12 +22,12 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 		div.setAttributeNode(divnode);
 		injectRoot.appendChild(div);
 				
-		const head = document.createElement("h2");
+		const head = document.createElement("h3");
 		const headnode = document.createTextNode(article.title);
 		head.appendChild(headnode);
 		div.appendChild(head);
 
-		const date = document.createElement("h3");
+		const date = document.createElement("h4");
 		const datenode = document.createTextNode(article.date);
 		date.appendChild(datenode);
 		div.appendChild(date);

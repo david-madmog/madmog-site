@@ -1,40 +1,93 @@
 
-:root {
-//  --light-bg-colour: #E1F5FE;
-//  --fgcolour: darkblue;
-  
-  --light-bg-colour: #cfdbad;
-  --fgcolour: #587e11;
-}
 
+/* Generic for the entire website */
+:root {
+  --light-bg-colour: #cee5d5;
+  --alt-bg-colour: #eedb85;
+  --fgcolour: #284932;
+
+  --border-rad: 15px;
+}
 
 body {
   font-family: "Zalando Sans SemiExpanded", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 24pt;
+  font-size: 18pt;
 
   color: var(--fgcolour);
   background-color: white;
 }
+
 	
 h2 {
     background-color: var(--light-bg-colour);
 	padding: 7;
-    border-radius: 10px;
+    border-radius: var(--border-rad);
 }
 
-.menubar
-{
-    background-color: var(--light-bg-colour);
-    border-radius: 10px;
+
+@media screen and (width <= 768px) {
+	body {  
+		font-size: 20pt;
+	}
 }
 
-#menupad {
-//  width: 200px;
-//  display: none; 
+/* Menu and headers */
+.header {
+	width: 100%;
+	display: flex;
+}
+
+/*
+.menupad-w {
+	width: 33%;
 	font-size: 30pt;
+	display: inline-block;
+}
+
+.menupad-n {
+	width: 33%;
+	display: none;
+}
+*/
+
+@media screen and (width <= 768px) {
+	.menupad-w {
+		display: none;
+	}
+
+	.menupad-n {
+		display: inline-block;
+	}
+}
+
+.menu {
+	width: 100%;
+//  float: left ;  
+	display: inline-block;
+
+/*//  left: 200; */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+//  margin-bottom: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.menubar {
+    background-color: var(--light-bg-colour);
+    border-radius: var(--border-rad);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (width <= 768px) {
+	.menubar {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 	
 .pseudolink {
@@ -43,8 +96,8 @@ h2 {
     background-color: var(--light-bg-colour);
 	font-size: 30pt;
     padding: 10px;
-    width: 12%;
-    border-radius: 10px;
+//    width: 25%;
+    border-radius: var(--border-rad);
 }
 
 .pseudolink:hover {
@@ -52,34 +105,13 @@ h2 {
     background-color: var(--fgcolour) ;
 } 
 
-#middle {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-#menu {
-	width: 100%;
-  float: left ;  
-//  left: 200;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 14px;
-}
-
-#watermark {
-  position: absolute;
-  opacity: 0.05;
-  z-index: -1;
-  display: none; 
-}
-
 #headname {
 	font-size: 72px
 }
 
-#bod {
+/* Middle body/content - general */
+
+.bod {
 	position: relative;
 	clear: left;
 	padding: 15;
@@ -88,7 +120,7 @@ h2 {
 }
 
 #bodybody {
-	max-width: 1170;
+	max-width: 1170px;
 }
 
 #header {
@@ -99,27 +131,60 @@ h2 {
   width: 100% ;
 }
 
+/* Specific for home page */
 #strap {
 	font-size: 24pt;
 	display:inline-block; 
-	width:100%;
+	width: 100%;
 	align: left;
 }
 
-#contactTable > tbody > tr > td {
-	padding: 5;
-    border-radius: 10px;
-	font-size: 22pt;
+/* Specific for about page */
+.about-grid-container {
+  display: grid;
+  grid-template-areas: 'aboutSection';
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .aboutSection {
-	box-shadow: 0px 0px 35px 15px var(--light-bg-colour);
-	padding: 15;
-    border-radius: 10px;
-	margin: 15;
+	background-color: var(--light-bg-colour);
+	padding: 20px;
+    border-radius: var(--border-rad);
+	margin: 10px;
 }
 
-#footer {
+@media screen and (width > 768px) {
+	.aboutSection:nth-child(4n) {
+		background-color: var(--alt-bg-colour);
+	}
+	.aboutSection:nth-child(4n+1) {
+		background-color: var(--alt-bg-colour);
+	}
+}
+
+@media screen and (width <= 768px) {
+	.about-grid-container {
+	  grid-template-columns: 1fr; /* Revert to single column */
+	}
+
+	.aboutSection:nth-child(even) {
+		background-color: var(--alt-bg-colour);
+	}
+}
+
+/* Specific for contact page */
+
+#contactTable > tbody > tr > td {
+	padding: 5;
+    border-radius: var(--border-rad);
+	font-size: 22pt;
+}
+
+/* Footer (all pages) */
+
+.footer {
+/*	grid-area: footer; */
 	clear:both;
 	font-size: small;
     background-color: var(--light-bg-colour);

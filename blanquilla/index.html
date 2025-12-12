@@ -1,8 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 
 <html>
 <head>
 <title>Blanquilla Ltd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,19 +15,7 @@
 
 
 function menuClick(menuitem) {
-
-  // Show or hide the watermark depending if we're on the home page or not
-  var menupad=document.getElementById("menupad") ;
-  var logo=document.getElementById("watermark") ;
-
-  if (menuitem == "home") {
-    logo.style.display = "none" ;
-  } else {
-    logo.style.display = "block" ;
-  }
-
-
-  // now, scan through the main bodybody nodes, hiding all apart from the selected one
+  // Scan through the main bodybody nodes, hiding all apart from the selected one
   // Nodes are identified by ID attribute
   var bodybody=document.getElementById("bodybody") ;
   var gotOne = false;
@@ -82,35 +71,44 @@ function loadInitialPage() {
 
 </head>
 <body onload="loadInitialPage();">
-   <div id = "watermark">
-<!--    <img src="Pics/peartree.png" />
- -->
+	<div class="page-grid-container">
+		<div class="header">
+		<!--
+			<div class="menupad-w"><img src="Pics/peartree-s.png" width="70"/>&nbsp;Blanquilla Ltd.&nbsp;</div>
+			<div class="menupad-n"><img src="Pics/peartree.png" width="70"/></div>
+			<div class = "menu">
+				<table class="menubar"><tr>
+					<td class="pseudolink" onClick="menuClick('home');">Home</td>
+					<td class="pseudolink" onClick="menuClick('aboutus');">About</td>
+					<td class="pseudolink" onClick="menuClick('news');">News</td>
+					<td class="pseudolink" onClick="menuClick('contact');">Contact</td>
+				</tr></table>
+			</div>
+			-->
+			<div class="menupad"><img src="Pics/peartree.png" width="90"/></div>
+			<div class = "menu">
+				<div class="menubar">
+					<div class="pseudolink" onClick="menuClick('home');">Home</div>
+					<div class="pseudolink" onClick="menuClick('aboutus');">About</div>
+					<div class="pseudolink" onClick="menuClick('news');">News</div>
+					<div class="pseudolink" onClick="menuClick('contact');">Contact</div>
+				</div>
+			</div>
+		</div>	
+
+		<div class = "bod">
+			<div id = "bodybody">
+				<div id="home" style="display:inline"></div>
+				<div id="aboutus" style="display:none"></div>
+				<div id = "news" style="display:none"></div>
+				<div id = "contact" style="display:none"></div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Copyright &copy; Blanquilla Ltd 2025 - All rights reserved</p>
+			<p>Blanquilla Ltd, registered in England and Wales, company no. 16896537, 96 Colney Hatch Lane, London N10 1EA, United Kingdom</p>
+		</div>
 	</div>
-
-  <div id = "menu">
-    <table id="header"><tr><td id="menupad"><img src="Pics/peartree-s.png" width="35"/>&nbsp;Blanquilla Ltd.&nbsp;</td><td>
-    <table class="menubar"><tr>
-      <td class="pseudolink" onClick="menuClick('home');">Home</td>
-      <td class="pseudolink" onClick="menuClick('aboutus');">About</td>
-      <td class="pseudolink" onClick="menuClick('news');">News</td>
-      <td class="pseudolink" onClick="menuClick('contact');">Contact</td>
-    </tr></table>
-    </td></tr></table>
-  </div>
-
-  <div id = "bod" class="bodyLeft">
-    <div id = "bodybody">
-      <div id="home" style="display:inline"></div>
-      <div id="aboutus" style="display:none"></div>
-      <div id = "news" style="display:none"></div>
-      <div id = "contact" style="display:none"></div>
-    </div>
-  </div>
-
-  <div id="Footer">
-    <p>Copyright &copy; Blanquilla Ltd 2025 - All rights reserved</p>
-	<p>Blanquilla Ltd, registered in England and Wales, company no. 16896537, 96 Colney Hatch Lane, London N10 1EA, United Kingdom</p>
-  </div>
-
 </body>
 </html>
