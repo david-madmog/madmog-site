@@ -139,6 +139,18 @@ h2 {
   font-weight: 400;
 }
 
+#strap h3 img {
+  margin-left: 0;
+}
+
+#strap h3 img {
+  /* No extra margin needed on the image itself */
+}
+
+#strap h3:has(img) {
+  padding-left: 32px;
+}
+
 @media screen and (max-width:762px), screen and (max-device-width:762px)  {
 	.logo {
 		display: none;
