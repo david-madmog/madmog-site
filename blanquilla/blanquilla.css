@@ -80,6 +80,7 @@ h2 {
     padding: 10px;
     /* width: 25%; */
     border-radius: var(--border-rad);
+	cursor: pointer;
 }
 
 .pseudolink:hover {
