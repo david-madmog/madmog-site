@@ -7,6 +7,12 @@
   --border-rad: 15px;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Zalando Sans SemiExpanded", sans-serif;
   font-optical-sizing: auto;
@@ -35,6 +41,7 @@ h2 {
 .header {
 	width: 100%;
 	display: flex;
+	margin-top: 10px;
 }
 
 .menu {
@@ -92,12 +99,19 @@ h2 {
 
 /* Middle body/content - general */
 
+.page-grid-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .bod {
 	position: relative;
 	clear: left;
 	padding: 15;
 	justify-content: center;
     display: flex;
+	flex: 1 0 auto;
 }
 
 #bodybody {
@@ -214,9 +228,11 @@ h2 {
 
 /*	grid-area: footer; */
 .footer {
-	clear:both;
+	clear: both;
 	font-size: small;
     background-color: var(--light-bg-colour);
     border-radius: 10px;
 	padding: 15px;
+	flex-shrink: 0;
+    margin: 10px;
 }
