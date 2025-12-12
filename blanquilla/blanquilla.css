@@ -27,32 +27,17 @@ h2 {
     border-radius: var(--border-rad);
 }
 
-/*
-@media screen and (width <= 768px) {
+@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
 	body {  
-		font-size: 20pt;
+		font-size: 12pt;
 	}
 }
-*/
 
 /* Menu and headers */
 .header {
 	width: 100%;
 	display: flex;
 }
-
-/*
-.menupad-w {
-	width: 33%;
-	font-size: 30pt;
-	display: inline-block;
-}
-
-.menupad-n {
-	width: 33%;
-	display: none;
-}
-*/
 
 .menu {
 	width: 100%;
@@ -80,7 +65,8 @@ h2 {
 		grid-template-columns: 1fr 1fr;
 	}
 }
-@media screen and (width <= 532px) {
+
+@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
 	.menubar {
 		grid-template-columns: 1fr;
 	}
@@ -128,17 +114,23 @@ h2 {
 }
 
 /* Specific for home page */
-@media screen and (width <= 768px) {
-	#logo {
-		display: none;
-	}
-}
-
 #strap {
 	font-size: 24pt;
 	display:inline-block; 
 	width: 100%;
 	align: left;
+}
+
+@media screen and ((width <= 768px) or (-webkit-device-pixel-ratio: 3)) {
+	.logo {
+		display: none;
+	}
+}
+
+@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
+	#strap {
+		font-size: 18pt;
+	}
 }
 
 /* Specific for about page */
@@ -197,7 +189,8 @@ h2 {
 	display: none;
 }
 
-@media screen and (width <= 532px) {
+
+@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
 	#li-n {
 		display: inline-block;
 	}
