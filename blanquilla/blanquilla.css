@@ -54,16 +54,6 @@ h2 {
 }
 */
 
-@media screen and (width <= 768px) {
-	.menupad-w {
-		display: none;
-	}
-
-	.menupad-n {
-		display: inline-block;
-	}
-}
-
 .menu {
 	width: 100%;
 //  float: left ;  
@@ -88,6 +78,11 @@ h2 {
 @media screen and (width <= 768px) {
 	.menubar {
 		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (width <= 532px) {
+	.menubar {
+		grid-template-columns: 1fr;
 	}
 }
 	
@@ -133,6 +128,12 @@ h2 {
 }
 
 /* Specific for home page */
+@media screen and (width <= 768px) {
+	#logo {
+		display: none;
+	}
+}
+
 #strap {
 	font-size: 24pt;
 	display:inline-block; 
@@ -189,6 +190,20 @@ h2 {
 	
 	.about-detail-title {
 		margin-top: 15px;
+	}
+}
+
+#li-n {
+	display: none;
+}
+
+@media screen and (width <= 532px) {
+	#li-n {
+		display: inline-block;
+	}
+	
+	#li-w {
+		display: none;
 	}
 }
 
