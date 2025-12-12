@@ -1,10 +1,15 @@
 /* Generic for the entire website */
 :root {
-  --light-bg-colour: #cee5d5;
+  --light-bg-colour: #ffffff;
+  --green-bg-colour:#cee5d5;
   --alt-bg-colour: #eedb85;
   --fgcolour: #284932;
 
   --border-rad: 15px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -21,12 +26,11 @@ body {
   font-size: 16pt;
 
   color: var(--fgcolour);
-  background-color: white;
+  background-color: var(--fgcolour);
 }
 
 	
 h2 {
-    background-color: var(--light-bg-colour);
 	padding: 7;
     border-radius: var(--border-rad);
 }
@@ -42,27 +46,27 @@ h2 {
 	width: 100%;
 	display: flex;
 	margin-top: 10px;
+	justify-content: center;
 }
 
 .menu {
-	width: 100%;
-	/* float: left ;  */
-	display: inline-block;
-
-	/*  left: 200; */
+  width: 80%;
+  margin: 0 auto;
+  display: block;
   text-align: center;
   position: relative;
   z-index: 1;
-  /* margin-bottom: 14px; */
-  margin-left: 10px;
-  margin-right: 10px;
+  border-radius: var(--border-rad);
 }
 
 .menubar {
     background-color: var(--light-bg-colour);
-    border-radius: var(--border-rad);
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--border-rad);
 }
 
 @media screen and (max-width:762px), screen and (max-device-width:762px) {
@@ -89,8 +93,7 @@ h2 {
 }
 
 .pseudolink:hover {
-    color:white; 
-    background-color: var(--fgcolour) ;
+    background-color: var(--green-bg-colour) ;
 } 
 
 #headname {
@@ -108,10 +111,14 @@ h2 {
 .bod {
 	position: relative;
 	clear: left;
-	padding: 15;
+	padding: 15px;
 	justify-content: center;
     display: flex;
 	flex: 1 0 auto;
+	background-color: var(--light-bg-colour);
+    border-radius: var(--border-rad);
+    margin: 10px auto;
+	width: 80%;
 }
 
 #bodybody {
@@ -131,7 +138,6 @@ h2 {
 	font-size: 24pt;
 	display:inline-block; 
 	width: 100%;
-	align: left;
 	font-weight: thin;
 }
 
@@ -139,8 +145,7 @@ h2 {
   font-weight: 400;
 }
 
-#strap h3 img {
-  margin-left: 0;
+#strap h3 img {margin-left: 0;
 }
 
 #strap h3 img {
@@ -172,7 +177,7 @@ h2 {
 }
 
 .aboutSection {
-	background-color: var(--light-bg-colour);
+	background-color: var(--green-bg-colour);
 	padding: 20px;
     border-radius: var(--border-rad);
 	margin: 10px;
@@ -248,8 +253,9 @@ h2 {
 	clear: both;
 	font-size: small;
     background-color: var(--light-bg-colour);
-    border-radius: 10px;
+    border-radius: var(--border-rad);
 	padding: 15px;
 	flex-shrink: 0;
-    margin: 10px;
+    margin: 10px auto;
+	width: 80%;
 }
