@@ -27,7 +27,7 @@ h2 {
     border-radius: var(--border-rad);
 }
 
-@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
+@media screen and (width <= 532px), screen and (device-width <= 532px) {
 	body {  
 		font-size: 12pt;
 	}
@@ -66,7 +66,7 @@ h2 {
 	}
 }
 
-@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
+@media screen and (width <= 532px), screen and (device-width <= 532px)) {
 	.menubar {
 		grid-template-columns: 1fr;
 	}
@@ -121,13 +121,13 @@ h2 {
 	align: left;
 }
 
-@media screen and ((width <= 768px) or (-webkit-device-pixel-ratio: 3)) {
+@media screen and (width <= 768px), screen and (device-width <= 768px)  {
 	.logo {
 		display: none;
 	}
 }
 
-@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
+@media screen and (width <= 532px), screen and (device-width <= 532px)) {
 	#strap {
 		font-size: 18pt;
 	}
@@ -157,7 +157,7 @@ h2 {
 	}
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 768px), screen and (device-width <= 768px) {
 	.about-grid-container {
 	  grid-template-columns: 1fr; /* Revert to single column */
 	}
@@ -175,7 +175,7 @@ h2 {
 	grid-template-columns: 1fr 2fr;
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <= 768px), screen and (device-width <= 768px) {
 	.contactTable {
 	  grid-template-columns: 1fr; /* Revert to single column */
 	}
@@ -190,7 +190,7 @@ h2 {
 }
 
 
-@media screen and ((width <= 532px) or (-webkit-device-pixel-ratio: 3)) {
+@media screen and (width <= 532px), screen and (device-width <= 532px) {
 	#li-n {
 		display: inline-block;
 	}
