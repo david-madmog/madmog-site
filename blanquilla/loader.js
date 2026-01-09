@@ -52,6 +52,9 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 						elmnode = document.createAttribute("target");
 						elmnode.value = "_blank"
 						elm.setAttributeNode(elmnode);
+						elmnode = document.createAttribute("class");
+						elmnode.value = "newsLink"
+						elm.setAttributeNode(elmnode);
 						elmnode = document.createTextNode(article.body[j][prop]);
 						elm.appendChild(elmnode);
 						break;
@@ -59,6 +62,9 @@ async function loadAndTransformJSON(JSONDoc, FragmentID, fileSeq)
 						elm = document.createElement("img");
 						elmnode = document.createAttribute("src");
 						elmnode.value = article.body[j][prop]
+						elm.setAttributeNode(elmnode);
+						elmnode = document.createAttribute("class");
+						elmnode.value = "newsImage"
 						elm.setAttributeNode(elmnode);
 						break;
 				}

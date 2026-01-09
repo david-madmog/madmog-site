@@ -213,6 +213,18 @@ h2 {
 	}
 }
 
+.newsImage {
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.newsLink {
+	
+}
+
 /* Specific for contact page */
 
 .contactTable {

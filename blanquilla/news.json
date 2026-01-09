@@ -1,11 +1,21 @@
 {
 	"news": [
 		{
+			"title": "ICE",
+			"date": "8 Jan 2026",
+			"body": [
+				{"text":"Very excited to attend ICE 2026 in Barcelona on January 20 at Fira Gran Via Barcelona."},
+				{"link": "https://www.icegaming.com"},
+				{"pic": "NewsPics/ICE2026.png"}
+			]
+		}, 
+		{
 			"title": "Company Launched",
-			"date": "8 December 2025",
+			"date": "8 Dec 2025",
 			"body": [
 				{"text":"Blanquilla registered at Companies House"}
 			]
 		}
+
 	]
 }
