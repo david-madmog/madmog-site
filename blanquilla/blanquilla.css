@@ -221,6 +221,12 @@ h2 {
 	grid-template-columns: 1fr 2fr;
 }
 
+.contactTableTitle {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: 1fr 1fr;
+}
+
 .about-detail-data img[src*="LI-In-Bug"] {
   vertical-align: middle;
   display: inline-block;
@@ -231,6 +237,10 @@ h2 {
 	.contactTable {
 	  grid-template-columns: 1fr; /* Revert to single column */
 	}
+
+	.contactTableTitle {
+		grid-template-columns: 1fr;
+	}
 	
 	.about-detail-title {
 		margin-top: 15px;
@@ -240,7 +250,6 @@ h2 {
 #li-n {
 	display: none;
 }
-
 
 @media screen and (max-width:532px), screen and (max-device-width:532px) {
 	#li-n {
@@ -327,6 +336,9 @@ h2 {
   .contactTable {
     gap: 4px;
   }
+  .contactTableTitle {
+	gap: 4px;
+}
   #headname {
     font-size: 32px;
   }
