@@ -194,6 +194,21 @@ h2 {
   margin-right: 6px;
 }
 
+.aboutReference {
+	    margin-bottom: 0;
+}
+
+.aboutAttribution {
+	font-style: italic;
+    text-align: right;
+	margin-top: 0;
+	font-size: 14pt;
+	}
+
+.aboutBullet {
+	vertical-align: top;
+}
+
 @media screen and (min-width:762px), screen and (min-device-width:762px) {
 	.aboutSection:nth-child(4n) {
 		background-color: var(--alt-bg-colour);
@@ -354,4 +369,8 @@ h2 {
   #headname {
     font-size: 32px;
   }
+  .aboutAttribution {
+	font-size: 10pt;
+	}
+
 }
