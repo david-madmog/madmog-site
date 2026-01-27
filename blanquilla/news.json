@@ -2,6 +2,17 @@
 	"news": [
 		{
 			"title": "ICE",
+			"date": "22 Jan 2026",
+			"body": [
+				{"text":"Another successful ICE 2026!"},
+				{"text":"What I love about the industry is all the great people I have worked with over the years, and ICE has always been the best show for catching up with all my various ex-colleagues, and talking about the diverse and exciting new things they're working on."},
+				{"text":"I was totally blown away by the size and buzz at the show - I had been sceptical but the move to Barcelona has breathed new life into it."},
+				{"pic": "NewsPics/IMG_5549.jpeg"},
+				{"text":"Thank you to everyone I spoke to and I hope you got as much out of it as I did."}
+			]
+		}, 
+		{
+			"title": "ICE",
 			"date": "8 Jan 2026",
 			"body": [
 				{"text":"Very excited to attend ICE 2026 in Barcelona on January 20 at Fira Gran Via Barcelona."},
